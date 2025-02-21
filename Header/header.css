@@ -1,0 +1,56 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: "Artifakt Element Light", serif;
+}
+header
+{
+    display: flex;
+    background-color: #454545;
+}
+#logo
+{
+    font-size: 50px;
+    color: white;
+    margin-left: 70px;
+    font-family: "Consolas", serif;
+
+}
+.enlaces
+{
+    text-decoration: none;
+    color: white;
+    margin-inline: 5px;
+}
+nav
+{
+    margin-left: 50px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+#buttons
+{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+#buttons-login
+{
+    margin-right: 25px;
+}
+.logs
+{
+    margin-inline: 3px;
+    background-color: #111111;
+    color: white;
+    border-style: none;
+    font-size: 20px;
+    padding: 5px;
+}
+#foto
+{
+    border-radius: 40px;
+}
