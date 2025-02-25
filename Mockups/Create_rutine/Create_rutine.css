@@ -1,0 +1,22 @@
+main
+{
+    display: grid;
+    justify-content: center;
+    margin-top: 1em;
+}
+#title
+{
+    font-size: 1.2em;
+    text-align: center;
+}
+#ejercicios
+{
+    display: grid;
+    justify-content: center;
+    margin-block: 0.7em;
+}
+#add_exercise
+{
+    border-radius: 0.5em;
+    margin-inline: 5em;
+}
