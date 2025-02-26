@@ -1,0 +1,21 @@
+.rectangle{
+    margin: 40px auto;
+    float: right;
+    background-color: lightgray;
+    width: 450px;
+    height: 250px;
+}
+#image {
+    width: 300px;
+}
+
+main {
+    display: flex;                        /* Activamos flexbox */
+    justify-content: flex-end;            /* Alineamos el contenido al final (derecha) */
+    align-items: center;                  /* Centra los elementos verticalmente */
+    height: 90vh;
+}
+
+img{
+    margin-right: auto;
+}
