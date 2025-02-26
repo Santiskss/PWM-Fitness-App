@@ -1,0 +1,16 @@
+main
+{
+    display: grid;
+    justify-content: center;
+}
+.title
+{
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+section
+{
+    margin-block: 1em;
+}
