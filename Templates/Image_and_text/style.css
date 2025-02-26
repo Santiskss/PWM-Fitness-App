@@ -1,31 +1,27 @@
-body {
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
 
 .container {
     text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 
-img {
+#picture {
     width: 400px;
     height: auto;
     background: lightgray;
 }
 
-p {
+#info {
     max-width: 400px;
     text-align: left;
 }
