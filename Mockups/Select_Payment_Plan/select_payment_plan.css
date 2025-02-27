@@ -1,0 +1,23 @@
+.rectangle{
+    margin: 30px auto;
+    background-color: lightgray;
+    width: 225px;
+    height: 325px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
