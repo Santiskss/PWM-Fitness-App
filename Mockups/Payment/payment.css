@@ -10,12 +10,12 @@
 }
 
 main {
-    display: flex;                        /* Activamos flexbox */
-    justify-content: flex-end;            /* Alineamos el contenido al final (derecha) */
-    align-items: center;                  /* Centra los elementos verticalmente */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     height: 90vh;
 }
 
-img{
+#pay{
     margin-right: auto;
 }
