@@ -24,6 +24,9 @@ header
     color: white;
     margin-inline: 5px;
 }
+.enlaces:hover{
+    color: lightblue;
+}
 nav
 {
     margin-left: 50px;
