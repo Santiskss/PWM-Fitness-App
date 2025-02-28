@@ -23,7 +23,7 @@ footer > div:first-child > section {
 footer > div:first-child > section h2 {
     text-align: left;
     font-size: 24px;
-    color: #000;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -53,7 +53,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #000;
+    color: black;
 }
 
 div > div {
@@ -72,5 +72,5 @@ span {
 
 span:hover {
     background-color: transparent;
-    border-color: #000;
+    border-color: black;
 }
