@@ -19,7 +19,7 @@ main
 #ejercicios
 {
     display: grid;
-    margin-block: 1em;
+    margin-block: 10em;
 }
 #ejercicios div
 {
