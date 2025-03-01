@@ -1,23 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .wrapper {
-    width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     padding: 20px;
     text-align: center;
 }
 
 .wrapper h2 {
-    color: black;
     margin-bottom: 20px;
 }
 
@@ -30,18 +17,10 @@ body {
     padding: 10px;
     border: 1px solid black;
     border-radius: 8px;
-    background-color: white;
-    color: black;
-}
-
-.input-box input:focus {
-    border: 1px black;
 }
 
 .input-box input[type="submit"] {
-    background-color: black;
+    background: black;
     color: white;
-    border: 1px black;
     cursor: pointer;
 }
-
