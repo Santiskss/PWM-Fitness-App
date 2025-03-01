@@ -3,10 +3,11 @@ main
     display: grid;
     justify-content: center;
     margin-top: 1em;
+    margin-block: 1em;
 }
 #title
 {
-    font-size: 1.2em;
+    font-size: 2.2em;
     text-align: center;
 }
 #ejercicios
@@ -15,10 +16,15 @@ main
     justify-content: center;
     margin-block: 0.7em;
 }
+#ejercicios div
+{
+    margin-block: 0.1em;
+}
 #add_exercise
 {
     border-radius: 0.5em;
     margin-inline: 5em;
     background-color: #D9D9D9;
     border-style: none;
+    font-size: 2em;
 }
