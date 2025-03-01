@@ -1,5 +1,4 @@
-
-footer {
+.footer_temp {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -8,7 +7,7 @@ footer {
     color: #333;
 }
 
-footer > div:first-child {
+.footer_temp > div:first-child {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -17,12 +16,12 @@ footer > div:first-child {
 
 }
 
-footer > div:first-child > section {
+.footer_temp > div:first-child > section {
     flex: 1;
     text-align: center;
 }
 
-footer > div:first-child > section h2 {
+.footer_temp > div:first-child > section h2 {
     text-align: left;
     font-size: 2em;
     color: black;
@@ -30,12 +29,12 @@ footer > div:first-child > section h2 {
 
 }
 
-footer > div:first-child > section p {
+.footer_temp > div:first-child > section p {
     font-size: 0.8em;
     color: #555;
 }
 
-footer > div:last-child {
+.footer_temp > div:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
