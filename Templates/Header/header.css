@@ -53,7 +53,8 @@ nav
     font-size: 20px;
     padding: 5px;
 }
-#foto
+#foto_perf
 {
-    border-radius: 40px;
+    height: 1em;
+    width: 1em;
 }
