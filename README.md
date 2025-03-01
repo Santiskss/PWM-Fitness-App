@@ -39,7 +39,6 @@ En esta carpeta se encuentran todos los png de los mockups</p>
 - Image_and_text
     - First_page
     - Pro_rutine
-- Description_exercise
 - Info_exercise
     - Create_rutine
     - Rutine
@@ -48,6 +47,7 @@ En esta carpeta se encuentran todos los png de los mockups</p>
     - Main_page
     - Register
 - Subscription
+  - Select_Payment_Plan
 
 ## Listado de paginas web
 - Calendar.html -> Calendar
@@ -65,3 +65,6 @@ En esta carpeta se encuentran todos los png de los mockups</p>
 - Select_Payment_Plan.html -> Select_Payment_Plan
 - Payment.html -> Payment
 
+## Enlaces
+[![Figma](https://img.shields.io/badge/Figma-8A2BE2)](https://www.figma.com/design/bZUSWn9qFARirKdOZZI1BM/TrainFlow?node-id=0-1&t=9nisu3xCd40wWV6j-1)
+[![Trello](https://img.shields.io/badge/Trello-198500FF)](https://trello.com/invite/b/67ab8943e46d194ce6fce3c8/ATTIfd9e6fbd2b77e614d7d34a565e749f6275992BDE/pwm)
