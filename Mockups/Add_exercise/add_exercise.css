@@ -9,7 +9,7 @@ main {
     max-width: 800px;
     text-align: center;
     margin-inline: auto;
-    margin-bottom: 100px;
+    margin-bottom: 3em;
 }
 
 .exercise-title {
@@ -19,24 +19,24 @@ main {
 
 .description-box {
     width: 100%;
-    height: 350px;
+    height: 18em;
     background-color: darkgray;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 1em;
 }
 
 .buttons button {
-    padding: 10px 20px;
+    padding: 0.5em 1em;
     margin: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .cancel-btn {

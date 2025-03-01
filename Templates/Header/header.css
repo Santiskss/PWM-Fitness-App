@@ -23,6 +23,8 @@ header
     text-decoration: none;
     color: white;
     margin-inline: 5px;
+    font-size: .7em;
+    font-family: "Barlow", sans-serif;
 }
 .enlaces:hover{
     color: lightblue;
@@ -50,11 +52,13 @@ nav
     background-color: #191970;
     color: white;
     border-style: none;
-    font-size: 20px;
+    font-size: 0.8em;
     padding: 5px;
+    font-family: "Barlow", sans-serif;
 }
 #foto_perf
 {
-    height: 1em;
-    width: 1em;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.7em;
 }
