@@ -1,6 +1,13 @@
+body, html
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 main
 {
     margin-block: 2em;
+    flex: 1;
 }
 main div
 {
