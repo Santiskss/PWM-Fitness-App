@@ -16,9 +16,10 @@
 }
 
 #picture {
-    width: 400px;
-    height: auto;
+    width: 15em;
+    height: 7em;
     background: lightgray;
+    margin-right: 2em;
 }
 
 #info {

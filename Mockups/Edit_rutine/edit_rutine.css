@@ -14,3 +14,7 @@ main
     display: grid;
     margin-block: 1em;
 }
+#ejercicios div
+{
+    margin-block: 0.1em;
+}
