@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 1em;
 }
 
 .boton {
@@ -10,7 +10,6 @@
     padding: 10px;
     background-color: #f0f0f0;
     color: #000000;
-    text-transform: uppercase;
     font-family: sans-serif;
     border-radius: 0.5em;
 }

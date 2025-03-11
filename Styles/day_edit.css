@@ -1,3 +1,13 @@
+html, body
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main
+{
+    flex: 1;
+}
 .square{
     width: 15em;
     height: 15em;

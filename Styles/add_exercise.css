@@ -1,4 +1,9 @@
-
+body, html
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 main {
     flex: 1;
     display: flex;

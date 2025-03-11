@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     margin-inline: 5em;
-    margin-top: 1em ;
+    margin-block: 0.3em;
 }
 #name_exercise
 {

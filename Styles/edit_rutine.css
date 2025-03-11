@@ -1,8 +1,15 @@
+html, body
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 main
 {
     display: grid;
     justify-content: center;
     margin-block: 1em;
+    flex: 1;
 }
 #title
 {
@@ -12,7 +19,7 @@ main
 #ejercicios
 {
     display: grid;
-    margin-block: 1em;
+    margin-block: 10em;
 }
 #ejercicios div
 {
