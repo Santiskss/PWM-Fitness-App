@@ -1,0 +1,30 @@
+/* Responsive Design */
+
+/* Tablets and small desktops (640px to 960px) */
+@media screen and (min-width: 40em) {
+    .wrapper {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .input-box input {
+        font-size: 1.1em;
+    }
+}
+
+/* Mobile devices (under 640px) */
+@media screen and (max-width: 40em) {
+    .wrapper {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .wrapper h2 {
+        font-size: 1.5em;
+    }
+
+    .input-box input {
+        font-size: 1em;
+        padding: 8px;
+    }
+}

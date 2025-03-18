@@ -1,0 +1,166 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: "Artifakt Element Light", serif;
+}
+
+/* Header */
+.header_temp {
+    display: flex;
+    background: linear-gradient(to bottom, #191970, mediumblue);
+    justify-content: space-between; /* Alinea el logo y los botones */
+    padding: 10px 30px;
+}
+
+#logo {
+    font-size: 50px;
+    color: white;
+    font-family: "Consolas", serif;
+    margin-left: 70px;
+}
+
+.enlaces {
+    text-decoration: none;
+    color: white;
+    margin-inline: 5px;
+    font-size: .7em;
+    font-family: "Barlow", sans-serif;
+}
+
+.enlaces:hover {
+    color: lightblue;
+}
+
+/* Navegación */
+nav {
+    margin-left: 50px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+#buttons {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#buttons-login {
+    margin-right: 25px;
+}
+
+/* Botones de login */
+.logs {
+    margin-inline: 3px;
+    background-color: #191970;
+    color: white;
+    border-style: none;
+    font-size: 0.8em;
+    padding: 5px;
+    font-family: "Barlow", sans-serif;
+}
+
+/* Foto de perfil */
+#foto_perf {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.7em;
+}
+
+/* Media Queries para el diseño responsive */
+
+/* Pantallas medianas (640px a 960px) */
+@media screen and (min-width: 40em) {
+    .header_temp {
+        flex-direction: row; /* Alineación en fila */
+        justify-content: space-between;
+        padding: 15px 30px;
+    }
+
+    #logo {
+        font-size: 60px;
+        margin-left: 20px; /* Ajustamos el margen del logo */
+    }
+
+    nav {
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: space-between; /* Los elementos se distribuyen */
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        width: 33%; /* Cada elemento de navegación ocupa un 33% */
+    }
+
+    #buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #foto_perf {
+        height: 2em;
+        width: 2em; /* Aumentamos el tamaño de la foto de perfil */
+    }
+}
+
+/* Pantallas pequeñas (menos de 640px) */
+@media screen and (max-width: 40em) {
+    .header_temp {
+        flex-direction: column; /* Los elementos del header se apilan */
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    #logo {
+        font-size: 48px;
+        text-align: center; /* Centrado del logo */
+        margin-left: 0;
+        margin-bottom: 10px; /* Añadimos espacio entre el logo y los botones */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; /* Los elementos se apilan en columna */
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 50%; /* Los enlaces ocupan el 50% del ancho */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #foto_perf {
+        height: 2em;
+        width: 2em;
+        margin-top: 10px; /* Añadimos espacio entre la foto y los botones */
+    }
+}
