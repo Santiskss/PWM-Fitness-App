@@ -8,10 +8,10 @@
   <link href="/Styles/subscription.css" rel="stylesheet">
   <title>Pago</title>
 
-  <script src="/JavaScript/xlu-include-file.js"></script>
+  <script src="/JavaScript/script.js"></script>
 </head>
 <body>
-<header xlu-include-file="/Templates/header.html">
+<header id="main_header">
 </header>
 
 <main>
@@ -20,9 +20,9 @@
   <button>Ipsum</button>
   </div>
     <div class="rectangles">
-      <div class="sub" xlu-include-file="/Templates/subscription.html"></div>
-      <div class="sub" xlu-include-file="/Templates/subscription.html"></div>
-      <div class="sub" xlu-include-file="/Templates/subscription.html"></div>
+      <div class="sub" id="subscription"></div>
+      <div class="sub" id="subscription2"></div>
+      <div class="sub" id="subscription3"></div>
     </div>
     <div class="questions">
       <div class="half-right">
@@ -56,9 +56,17 @@
   </main>
 
 
-<footer xlu-include-file="/Templates/footer.html">
+<footer id="main_footer">
 </footer>
 
-<script>xLuIncludeFile()</script>
+<script>
+
+  loadTemplate("/Templates/header.html", "main_header")
+  loadTemplate("/Templates/footer.html", "main_footer")
+  loadTemplate("/Templates/subscription.html", "subscription")
+  loadTemplate("/Templates/subscription.html", "subscription2")
+  loadTemplate("/Templates/subscription.html", "subscription3")
+
+</script>
 </body>
 </html>

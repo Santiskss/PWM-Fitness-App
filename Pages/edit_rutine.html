@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Rutine</title>
-    <script src="/JavaScript/xlu-include-file.js"></script>
+    <script src="/JavaScript/script.js"></script>
     <link rel="stylesheet" href="/Styles/header.css">
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/Edit_and_Delete.css">
     <link rel="stylesheet" href="/Styles/edit_rutine.css">
 </head>
 <body>
-    <header xlu-include-file="/Templates/header.html"></header>
+    <header id="main_header"></header>
     <main>
         <h2 id="title">Rutines</h2>
         <div id="ejercicios">
-            <div xlu-include-file="/Templates/Edit_and_Delete.html"></div>
-            <div xlu-include-file="/Templates/Edit_and_Delete.html"></div>
-            <div xlu-include-file="/Templates/Edit_and_Delete.html"></div>
-            <div xlu-include-file="/Templates/Edit_and_Delete.html"></div>
-            <div xlu-include-file="/Templates/Edit_and_Delete.html"></div>
+            <div id="edit_delete"></div>
+            <div id="edit_delete2"></div>
+            <div id="edit_delete3"></div>
+            <div id="edit_delete4"></div>
+            <div id="edit_delete5"></div>
         </div>
     </main>
-    <footer xlu-include-file="/Templates/footer.html"></footer>
+    <footer id="main_footer"></footer>
 <script>
-    xLuIncludeFile();
+
+    loadTemplate("/Templates/header.html", "main_header")
+    loadTemplate("/Templates/footer.html", "main_footer")
+    loadTemplate("/Templates/Edit_and_Delete", "edit_delete")
+    loadTemplate("/Templates/Edit_and_Delete", "edit_delete2")
+    loadTemplate("/Templates/Edit_and_Delete", "edit_delete3")
+    loadTemplate("/Templates/Edit_and_Delete", "edit_delete4")
+    loadTemplate("/Templates/Edit_and_Delete", "edit_delete5")
+
 </script>
 </body>
 

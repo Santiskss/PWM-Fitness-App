@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="/Styles/header.css">
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/add_exercise.css">
-    <script src="/JavaScript/xlu-include-file.js"></script>
+    <script src="/JavaScript/script.js"></script>
 </head>
 <body>
 
-<header id="main_header" xlu-include-file="/Templates/header.html">
+<header id="main_header">
 </header>
 
 <main>
@@ -24,12 +24,13 @@
 </main>
 
 
-<footer id="main_footer" xlu-include-file="/Templates/footer.html">
+<footer id="main_footer">
 </footer>
 
 <script>
 
-    xLuIncludeFile();
+    loadTemplate("/Templates/header.html", "main_header")
+    loadTemplate("/Templates/footer.html", "main_footer")
 
 </script>
 

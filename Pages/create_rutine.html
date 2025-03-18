@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Rutine</title>
-    <script src="/JavaScript/xlu-include-file.js"></script>
     <link rel="stylesheet" href="/Styles/header.css">
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/info_exercise.css">
     <link rel="stylesheet" href="../Styles/create_rutine.css">
+    <script src="/JavaScript/script.js"></script>
 </head>
 <body>
-    <header xlu-include-file="/Templates/header.html"></header>
+    <header id="main_header"></header>
     <main>
         <h2 id="title">Rutine Name</h2>
         <div id="ejercicios">
-            <div xlu-include-file="/Templates/info_exercise.html"></div>
-            <div xlu-include-file="/Templates/info_exercise.html"></div>
-            <div xlu-include-file="/Templates/info_exercise.html"></div>
+            <div id="info_exercise"></div>
+            <div id="info_exercise2"></div>
+            <div id="info_exercise3"></div>
+
         </div>
         <button id="add_exercise">add exercise</button>
     </main>
-    <footer xlu-include-file="/Templates/footer.html"></footer>
+    <footer id="main_footer"></footer>
 <script>
-    xLuIncludeFile();
+
+    loadTemplate("/Templates/header.html", "main_header")
+    loadTemplate("/Templates/footer.html", "main_footer")
+    loadTemplate("/Templates/info_exercise.html", "info_exercise")
+    loadTemplate("/Templates/info_exercise.html", "info_exercise2")
+    loadTemplate("/Templates/info_exercise.html", "info_exercise3")
+
 </script>
 </body>
 </html>

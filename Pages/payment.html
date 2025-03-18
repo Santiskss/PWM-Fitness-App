@@ -6,11 +6,11 @@
   <link href="/Styles/footer.css" rel=stylesheet>
   <link href="/Styles/header.css" rel=stylesheet>
   <title>Pago</title>
+  <script src="/JavaScript/script.js"></script>
 
-  <script src="/JavaScript/xlu-include-file.js"></script>
 </head>
 <body>
-<header id="header" xlu-include-file="/Templates/header.html">
+<header id="header" >
 </header>
 
 <main>
@@ -19,9 +19,14 @@
 </main>
 
 
-<footer id="footer" xlu-include-file="/Templates/footer.html">
+<footer id="footer" >
 </footer>
 
-<script>xLuIncludeFile()</script>
+<script>
+
+  loadTemplate("/Templates/header.html", "main_header")
+  loadTemplate("/Templates/footer.html", "main_footer")
+
+</script>
 </body>
 </html>
