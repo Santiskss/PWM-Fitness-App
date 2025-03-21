@@ -1,0 +1,31 @@
+document.addEventListener("DOMContentLoaded", () =>
+{
+    document.getElementById("formulario").addEventListener("submit", async event =>
+    {
+        event.preventDefault()
+        const email = document.getElementById("email").value
+        const password = document.getElementById("password").value
+
+        const response = await fetch("http://localhost:1337/api/user-app/login",
+            {
+                method: "POST",
+                headers:
+                    {
+                        "Content-Type": "application/json"
+                    },
+                body: JSON.stringify({email, password})
+            })
+
+        const data = await response.json()
+
+        if (response.ok)
+        {
+            alert("Datos correctos")
+            localStorage.setItem("jwt", data.token)
+        }
+        else
+        {
+            alert("Datos incorrectos")
+        }
+    })
+})
