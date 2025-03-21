@@ -1,86 +1,21 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    font-size: 25px;
-    font-family: "Artifakt Element Light", serif;
-}
-.header_temp
-{
-    display: flex;
-    background: linear-gradient(to bottom, #191970, mediumblue);
-}
-#logo
-{
-    font-size: 50px;
-    color: white;
-    margin-left: 70px;
-    font-family: "Consolas", serif;
-
-}
-.enlaces
-{
-    text-decoration: none;
-    color: white;
-    margin-inline: 5px;
-    font-size: .7em;
-    font-family: "Barlow", sans-serif;
-}
-.enlaces:hover{
-    color: lightblue;
-}
-nav
-{
-    margin-left: 50px;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-}
-#buttons
-{
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-}
-#buttons-login
-{
-    margin-right: 25px;
-}
-.logs
-{
-    margin-inline: 3px;
-    background-color: #191970;
-    color: white;
-    border-style: none;
-    font-size: 0.8em;
-    padding: 5px;
-    font-family: "Barlow", sans-serif;
-}
-#foto_perf
-{
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 0.7em;
-}
-
-@media screen and (max-width: 412px) {
+/* 1280 px to 1440 px*/
+@media screen and (min-width: 80em) {
     .header_temp {
-        background-color: black; /* Cambia el fondo a negro */
+        background: linear-gradient(to bottom, magenta, mediumblue);
     }
 
-    /* Otros ajustes para pantallas pequeñas pueden ir aquí */
-    #logo {
-        font-size: 40px;
-        margin-left: 10px;
+
+}
+/*412 px to 1280 px*/
+@media screen and (min-width: 25.75em) {
+    .header_temp {
+        background: linear-gradient(to bottom, greenyellow, mediumblue);
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    #buttons {
-        flex-direction: column;
-        margin-right: 0;
-    }
+}
+
+/* under 412 px*/
+@media screen and (max-width: 25.75em) {
+
 }
