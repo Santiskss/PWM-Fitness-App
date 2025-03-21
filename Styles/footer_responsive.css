@@ -1,0 +1,102 @@
+/* Footer responsive para tablets y móviles */
+@media screen and (max-width: 1280px) {
+    .footer_temp {
+        padding: 15px;
+    }
+
+    .footer_temp > div:first-child {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer_temp > div:first-child > section {
+        flex: 1 1 40%; /* Permite que haya dos secciones por fila */
+        margin-bottom: 10px;
+    }
+
+    .footer_temp > div:first-child > section h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    .footer_temp > div:last-child {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer_temp nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer_temp nav a {
+        font-size: 0.8em;
+    }
+
+    .footer_temp div > div {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_temp > div:first-child {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_temp > div:first-child > section {
+        width: 100%;
+    }
+
+    .footer_temp > div:first-child > section h2 {
+        font-size: 1.5em;
+    }
+
+    .footer_temp > div:last-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer_temp nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer_temp div > div {
+        justify-content: center;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles 412x917 y similares) */
+@media screen and (max-width: 480px) {
+    .footer_temp {
+        padding: 10px;
+    }
+
+    .footer_temp > div:first-child > section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_temp > div:last-child {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer_temp nav a {
+        font-size: 0.7em;
+    }
+
+    .footer_temp div > div {
+        gap: 8px;
+    }
+
+    .footer_temp span {
+        width: 25px;
+        height: 25px;
+    }
+}

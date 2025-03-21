@@ -5,5 +5,4 @@ function loadTemplate(templatePath, elementId) {
             document.getElementById(elementId).innerHTML = data;
         })
         .catch(error => console.error(`Error cargando ${templatePath}:`, error));
-    console.log("Hola")
 }
