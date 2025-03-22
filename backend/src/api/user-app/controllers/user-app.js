@@ -40,6 +40,20 @@ module.exports = createCoreController("api::user-app.user-app", ({ strapi }) => 
         });
     },
     async register(ctx) {
-        const { email, password } = ctx.request.body;
+        const { name, email, password } = ctx.request.body;
+        const password_encrpyt = await bcrypt.hash(password, 10);
+        const user = await strapi.db.query("api::user-app.user-app").create(
+            {
+                data: {
+                    name: name,
+                    email: email,
+                    password: password_encrpyt,
+                    rol: "user",
+                },
+            }
+        );
+        return ctx.send({
+            message: "Registro exitoso",
+        })
     }
 }));
