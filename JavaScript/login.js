@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             alert("Datos correctos")
             localStorage.setItem("jwt", data.token)
+            location.replace("http://localhost:63342/PWM-Fitness-App/Pages/first_page.html")
         }
         else
         {
