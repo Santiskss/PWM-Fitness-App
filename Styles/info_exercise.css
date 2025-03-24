@@ -2,7 +2,6 @@
 {
     margin:0;
     padding:0;
-    font-size: 30px;
 }
 .info_exercise
 {
@@ -10,16 +9,19 @@
     justify-content: center;
     margin-inline: 5em;
     margin-block: 0.3em;
+    font-size: 1.2em;
 }
 #name_exercise
 {
     padding: 20px;
     background-color: #D9D9D9;
     padding-inline: 5em;
+    font-size: 1.2em;
 }
 #reps
 {
     margin-left: 2em;
     background-color: #D9D9D9;
     padding: 20px;
+    font-size: 1.2em;
 }
