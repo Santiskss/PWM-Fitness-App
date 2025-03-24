@@ -470,7 +470,7 @@ export interface ApiUserAppUserApp extends Struct.CollectionTypeSchema {
     singularName: 'user-app';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -486,7 +486,7 @@ export interface ApiUserAppUserApp extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     password: Schema.Attribute.Password;
     publishedAt: Schema.Attribute.DateTime;
-    rol: Schema.Attribute.Enumeration<['Professional', 'User', 'Super_user']>;
+    rol: Schema.Attribute.Enumeration<['professional', 'user', 'super_user']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
