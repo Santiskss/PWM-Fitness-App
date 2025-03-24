@@ -41,6 +41,16 @@ module.exports = createCoreController("api::user-app.user-app", ({ strapi }) => 
     },
     async register(ctx) {
         const { name, email, password } = ctx.request.body;
+        const check_user = await strapi.db.query("api::user-app.user-app").findOne(
+            {
+                where: { email }
+            })
+        if (check_user != null) {
+            return ctx.send({
+                message: "Usuario existente"
+            }, 400);
+        }
+
         const password_encrpyt = await bcrypt.hash(password, 10);
         const user = await strapi.db.query("api::user-app.user-app").create(
             {
@@ -52,8 +62,14 @@ module.exports = createCoreController("api::user-app.user-app", ({ strapi }) => 
                 },
             }
         );
+        const token = jwt.sign(
+            { id: user.id, email: user.email },
+            process.env.JWT_SECRET,
+            { expiresIn: "2h" }
+        );
         return ctx.send({
             message: "Registro exitoso",
+            token
         })
     }
 }));
