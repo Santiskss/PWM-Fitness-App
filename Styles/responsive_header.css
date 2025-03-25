@@ -20,8 +20,24 @@
 @media screen and (max-width: 25.75em) {
     .header_temp {
         background: linear-gradient(to bottom, rebeccapurple, mediumblue);
+        width: 25.75em;
+        height: 6.5em;
     }
     .logs{
         visibility: hidden;
+    }
+    nav{
+        visibility: hidden;
+    }
+
+    #foto_perf
+    {
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 0.7em;
+    }
+    #logo{
+        font-size: 2em;
+        justify-content: left;
     }
 }
