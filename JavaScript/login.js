@@ -1,3 +1,8 @@
+const clave = localStorage.getItem("jwt")
+if(clave)
+{
+    location.replace("http://localhost:63342/PWM-Fitness-App/Pages/first_page.html")
+}
 document.addEventListener("DOMContentLoaded", () =>
 {
     document.getElementById("formulario").addEventListener("submit", async event =>
@@ -27,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () =>
         else
         {
             alert("Datos incorrectos")
+            document.getElementById("password").style.borderColor = "red"
         }
     })
 })
