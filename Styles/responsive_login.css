@@ -1,39 +1,38 @@
-/* 412 px to 1280 px */
+/* (412px - 1280px) */
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
     .wrapper {
-        max-width: 90%; /* Hace que el contenedor sea más flexible */
-        padding: 15px;
+        max-width: 80%;
     }
 
-    .input-box input {
-        padding: 8px;
-        font-size: 1em; /* Ajusta el tamaño del texto */
-    }
-
-    .input-box input[type="submit"] {
-        padding: 10px;
-        font-size: 1.1em;
+    .section img {
+        width: 80%;
     }
 }
 
-/* Menos de 412 px */
+/* (menos de 412px) */
 @media screen and (max-width: 25.75em) {
     .wrapper {
-        max-width: 100%;
+        max-width: 95%;
         padding: 10px;
     }
 
-    .wrapper h2 {
-        font-size: 1.2em; /* Reduce el tamaño del título */
+    .header_temp {
+        padding: 0.8em;
     }
 
-    .input-box input {
-        padding: 6px;
-        font-size: 0.9em;
+    #logo {
+        font-size: 1.2em;
     }
 
-    .input-box input[type="submit"] {
-        padding: 8px;
-        font-size: 1em;
+    #menu-icon {
+        font-size: 1.5em;
+    }
+
+    .section img {
+        width: 100%;
+    }
+
+    .footer .nav-links a {
+        font-size: 0.7em;
     }
 }
