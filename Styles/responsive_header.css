@@ -32,17 +32,27 @@
         visibility: hidden;
     }
 
-    #foto_perf
-    {
-        height: 1em;
-        width: 1em;
-        border-radius: 0.7em;
-    }
     #logo {
         font-size: 1.5em;
         text-align: left;
         margin-top: 0.5em;
         margin-left: 0.75em;
+    }
+
+    #buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: absolute;
+        top: 0.5em;
+        right: 0;
+    }
+
+    #foto_perf {
+        height: 2em;
+        width: 2em;
+        border-radius: 1em;
     }
 
 

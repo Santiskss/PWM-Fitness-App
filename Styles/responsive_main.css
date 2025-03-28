@@ -1,30 +1,38 @@
 /* 412 px to 1280 px */
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
     #imagenes {
-        width: 90%; /* Reducir un poco el tamaño en pantallas medianas */
-        height: 60vh;
+        width: 40em; /* Controla el tamaño con em */
+        height: auto; /* Mantiene la proporción */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+
     .text-box p {
-        margin-inline: 5em; /* Reducir margen para que el texto no sea demasiado ancho */
-        font-size: 1.5em; /* Ajustar tamaño del texto */
+        margin-inline: 5em;
+        font-size: 1.5em;
     }
 }
 
-/* under 412 px (pantallas pequeñas) */
+/* under 412 px */
 @media screen and (max-width: 25.75em) {
     #imagenes {
-        width: 100%; /* Ocupar todo el ancho disponible */
-        height: auto; /* Ajustar altura automáticamente */
+        width: 40em; /* Controla el tamaño con em */
+        height: auto; /* Mantiene la proporción */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
+
 
     .text-box {
         padding-inline: 0.5em;
     }
 
     .text-box p {
-        margin-inline: 1em; /* Menos margen para que el texto no quede muy comprimido */
-        font-size: 1.2em; /* Reducir tamaño del texto para móviles */
+        margin-inline: 1em;
+        font-size: 1.2em;
         padding: 0.5em;
     }
 }

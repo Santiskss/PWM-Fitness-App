@@ -9,8 +9,8 @@
 /* under 412 px*/
 @media screen and (max-width: 25.75em) {
 
-#footer_text{
-    visibility: hidden;
-}
+    .footer_texts{
+        visibility: hidden;
+    }
 
 }
