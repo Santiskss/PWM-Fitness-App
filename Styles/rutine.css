@@ -15,15 +15,17 @@ main
 #title
 {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom:1em;
+    font-size: 1.7em;
 }
 #info
 {
     margin-inline: 25%  ;
     background-color: #D9D9D9;
     text-align: center;
+    margin-bottom:1em;
 }
 #exercises
 {
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }

@@ -1,27 +1,25 @@
-*
-{
-    margin:0;
-    padding:0;
-}
-.info_exercise
-{
+.info_exercise {
     display: flex;
-    justify-content: center;
-    margin-inline: 5em;
-    margin-block: 0.3em;
-    font-size: 1.2em;
-}
-#name_exercise
-{
-    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
     background-color: #D9D9D9;
-    padding-inline: 5em;
-    font-size: 1.2em;
+    width: 100%;
+    max-width: 700px;
+    height: 60px;
+    margin: 10px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+
 }
-#reps
-{
-    margin-left: 2em;
-    background-color: #D9D9D9;
-    padding: 20px;
-    font-size: 1.2em;
+
+.name_exercise {
+    flex: 1;
+    font-size: 1.1em;
+    overflow: hidden;
+}
+
+.reps {
+    width: 80px;
+    text-align: right;
 }
