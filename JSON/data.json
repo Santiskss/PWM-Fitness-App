@@ -1,0 +1,11 @@
+{
+  "nav_items_header" :
+  [
+    "Crear rutina","Editar rutina", "Rutinas profesionales "
+  ],
+  "logeo_header" :
+  [
+    "Registrarse","Iniciar sesion"
+  ],
+  "message_main_page" : "¡Transforma tu entrenamiento hoy mismo!\nCrea tu rutina personalizada en minutos y accede a entrenamientos pro diseñados por expertos. ¡Empieza ahora y lleva tu rendimiento al siguiente nivel!"
+}

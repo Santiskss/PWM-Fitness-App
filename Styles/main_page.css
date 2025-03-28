@@ -3,9 +3,8 @@ body
     display: grid;
 }
 #imagenes {
-    width: 99%;
-    height: 70vh;
-    display: block;
+    width: 6em;
+    height: 6em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -17,7 +16,7 @@ body
 }
 .text-box p
 {
-    margin-inline: 10em;
+    margin-inline: 5em;
     background-color: rgb(217, 217, 217);
     font-size: 2em;
     border-radius: 0.2em;
