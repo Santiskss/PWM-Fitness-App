@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rutine</title>
-  <script src="/JavaScript/script.js"></script>
+  <script src="../JavaScript/script.js" defer></script>
   <link rel="stylesheet" href="/Styles/header.css">
   <link rel="stylesheet" href="/Styles/footer.css">
   <link rel="stylesheet" href="/Styles/info_exercise.css">
@@ -11,29 +11,23 @@
 </head>
 <body>
   <header id="main_header"></header>
+  <section id="selectors">
+    <label for="typeSelector">Tipo de rutina:</label>
+    <select id="typeSelector">
+      <option disabled selected>Selecciona tipo</option>
+    </select>
+
+    <label for="routineSelector">Rutina:</label>
+    <select id="routineSelector" disabled>
+      <option disabled selected>Selecciona rutina</option>
+    </select>
+  </section>
+
   <main>
-    <h2 id="title">Rutine name</h2>
-    <p id="info">Worem ipsum dolor sit amet, consectetur adipiscing elit.
-      Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-    <div id="info_exercise1" ></div>
-    <div id="info_exercise2" ></div>
-    <div id="info_exercise3" ></div>
-    <div id="info_exercise4" ></div>
-    <div id="info_exercise5" ></div>
+    <h2 id="title">Rutina</h2>
+    <p id="info">Selecciona una rutina para ver los ejercicios</p>
+    <div id="exercises"></div>
   </main>
   <footer id="main_footer"></footer>
-<script>
-
-  loadTemplate("/Templates/header.html", "main_header")
-  loadTemplate("/Templates/footer.html", "main_footer")
-  loadTemplate("/Templates/info_exercise.html", "info_exercise1")
-  loadTemplate("/Templates/info_exercise.html", "info_exercise2")
-  loadTemplate("/Templates/info_exercise.html", "info_exercise3")
-  loadTemplate("/Templates/info_exercise.html", "info_exercise4")
-  loadTemplate("/Templates/info_exercise.html", "info_exercise5")
-
-
-
-</script>
 </body>
 </html>
