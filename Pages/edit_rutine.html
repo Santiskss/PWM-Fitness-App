@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/Edit_and_Delete.css">
     <link rel="stylesheet" href="/Styles/edit_rutine.css">
+    <script src="../JavaScript/edit_rutine.js"></script>
+    <script src="../JavaScript/loadHeader.js"></script>
+    <script src="../JavaScript/loadFooter.js"></script>
 </head>
 <body>
     <header id="main_header"></header>
     <main>
         <h2 id="title">Rutines</h2>
         <div id="ejercicios">
-            <div id="edit_delete"></div>
-            <div id="edit_delete2"></div>
-            <div id="edit_delete3"></div>
-            <div id="edit_delete4"></div>
-            <div id="edit_delete5"></div>
+        <div id="ejercicio1"></div>
         </div>
     </main>
     <footer id="main_footer"></footer>
@@ -26,11 +25,7 @@
 
     loadTemplate("/Templates/header.html", "main_header")
     loadTemplate("/Templates/footer.html", "main_footer")
-    loadTemplate("/Templates/Edit_and_Delete.html", "edit_delete")
-    loadTemplate("/Templates/Edit_and_Delete.html", "edit_delete2")
-    loadTemplate("/Templates/Edit_and_Delete.html", "edit_delete3")
-    loadTemplate("/Templates/Edit_and_Delete.html", "edit_delete4")
-    loadTemplate("/Templates/Edit_and_Delete.html", "edit_delete5")
+    load()
 
 </script>
 </body>

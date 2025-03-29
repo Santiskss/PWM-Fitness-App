@@ -7,7 +7,7 @@ function load()
     })
         .then(function (json)
         {
-            const rutinas = document.querySelectorAll(".info")
+            const rutinas = document.querySelectorAll("#info")
             for (let i = 0; i < rutinas.length; i++)
             {
                 rutinas[i].textContent = json[i*3].description
