@@ -3,7 +3,7 @@
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
     .header_temp{
         height: 3em;
-        width: auto;
+        width: 100%;
     }
     #logo {
         font-size: 1.5em;
@@ -13,8 +13,8 @@
     }
 
     #foto_perf {
-        height: 1em;
-        width: 1em;
+        height: 1.5em;
+        width: 1.5em;
     }
 }
 
