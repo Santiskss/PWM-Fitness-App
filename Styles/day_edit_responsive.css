@@ -1,0 +1,27 @@
+
+/*412 px to 1280 px*/
+@media screen and (min-width: 25.75em) and (max-width: 80em) {
+    .square {
+        width: 15em;
+        height: 15em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* under 412 px*/
+@media screen and (max-width: 25.75em) {
+    .square {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px 20px;
+        height: 10em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+}

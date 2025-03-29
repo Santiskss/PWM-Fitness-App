@@ -1,16 +1,24 @@
 html, body
 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-main
-{
+main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .square{
-    width: 15em;
-    height: 15em;
+    width: 18em;
+    height: 18em;
     margin: 30px auto;
     background-color: lightgray;
     display: flex;
@@ -21,6 +29,7 @@ main
 h1{
     text-align: center;
     margin: 1em;
+    margin-top: 50px;
 }
 #add_button{
     display: flex;
