@@ -68,5 +68,54 @@
   {
     "today" : "Rutina funcional enfocada en el grupo \"core\" para nivel beginner.",
     "calendar" : "Accede a tu calendario y revisa de un vistazo tus entrenamientos pasados, los que tienes programados y tus días de descanso. Mantén el control de tu progreso y organiza fácilmente tus próximas sesiones."
+  },
+  "suscripciones" :
+  {
+    "planes" :
+            [
+              {
+                "name" : "plan1",
+                "precio" : "5€"
+              },
+              {
+                "name" : "plan2",
+                "precio" : "15€"
+              },
+              {
+                "name" : "plan3",
+                "precio" : "25€"
+              }
+            ],
+    "preguntas" :
+            [
+              {
+                "pregunta": "¿Qué incluye cada plan de suscripción?",
+                "respuesta" : ""
+              },
+              {
+                "pregunta": "¿Puedo cambiar mi plan después de suscribirme?",
+                "respuesta" : ""
+              },
+              {
+                "pregunta": "¿Ofrecen un período de prueba gratuito?",
+                "respuesta" : ""
+              },
+              {
+                "pregunta": "¿Qué métodos de pago aceptan?",
+                "respuesta" : ""
+              },
+              {
+                "pregunta": "¿Qué pasa si cancelo mi suscripción antes de que termine el mes?",
+                "respuesta" : ""
+              },
+              {
+                "pregunta": "¿Las rutinas y el contenido son diferentes según el plan?",
+                "respuesta" : ""
+              },
+              {
+                "pregunta": "¿Puedo acceder a mi progreso y rutinas si no renuevo la suscripción?",
+                "respuesta" : ""
+              }
+            ]
   }
 }
