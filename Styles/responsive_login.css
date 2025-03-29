@@ -1,41 +1,31 @@
-/* (412px - 1280px) */
+/* (412px - 1280px) - Tablet */
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
     .wrapper {
-        max-width: 80%;
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .section img {
-        width: 80%;
+        width: 60%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
-/* (menos de 412px) */
+/* (menos de 412px) - Móvil */
 @media screen and (max-width: 25.75em) {
     .wrapper {
-        max-width: 700px;
-        padding: 20px;
-        text-align: center;
-        color: greenyellow;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1.5em;
     }
 
-    .wrapper h2 {
-        margin-bottom: 20px;
-    }
-
-    .input-box {
-        margin-bottom: 20px;
-    }
-
-    .input-box input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 8px;
-    }
-
-    .input-box input[type="submit"] {
-        background: black;
-        color: white;
-        cursor: pointer;
+    .section img {
+        width: 35%;
     }
 }
