@@ -43,10 +43,13 @@
 
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
-    loadHeader()
-    loadFooter()
+    Promise.all([loadTemplate("/Templates/header.html", "main_header"),
+    loadTemplate("/Templates/footer.html", "main_footer")]
+    ).then(() =>{
+        loadHeader()
+        loadFooter()
+    })
+
 
 </script>
 

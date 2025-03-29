@@ -36,9 +36,12 @@
 
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
-    load()
+    Promise.all([loadTemplate("/Templates/header.html", "main_header"),
+    loadTemplate("/Templates/footer.html", "main_footer")]
+    ).then(() => {
+        load()
+    })
+
 
 </script>
 
