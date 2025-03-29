@@ -76,3 +76,8 @@ span:hover {
     background-color: transparent;
     border-color: black;
 }
+
+img {
+    width: 1.7em;
+    height: 1.7em;
+}

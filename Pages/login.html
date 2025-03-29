@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="/Styles/header.css">
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/login.css">
-    <link href="/Styles/responsive_login.css" rel="stylesheet" media="screen and (max-width: 1440px)">
     <link rel="stylesheet" href="/Styles/responsive_header.css" media="screen and (max-width: 1440px)">
+    <link rel="stylesheet" href="/Styles/responsive_login.css" media="screen and (max-width: 1440px)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/register.css">
     <script src="/JavaScript/script.js"></script>
     <script src="/JavaScript/login.js"></script>
+    <script src="../JavaScript/loadHeader.js"></script>
+    <script src="../JavaScript/loadFooter.js"></script>
 </head>
 <body>
 
@@ -42,6 +45,8 @@
 
     loadTemplate("/Templates/header.html", "main_header")
     loadTemplate("/Templates/footer.html", "main_footer")
+    loadHeader()
+    loadFooter()
 
 </script>
 

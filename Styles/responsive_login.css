@@ -12,27 +12,30 @@
 /* (menos de 412px) */
 @media screen and (max-width: 25.75em) {
     .wrapper {
-        max-width: 95%;
-        padding: 10px;
+        max-width: 700px;
+        padding: 20px;
+        text-align: center;
+        color: greenyellow;
     }
 
-    .header_temp {
-        padding: 0.8em;
+    .wrapper h2 {
+        margin-bottom: 20px;
     }
 
-    #logo {
-        font-size: 1.2em;
+    .input-box {
+        margin-bottom: 20px;
     }
 
-    #menu-icon {
-        font-size: 1.5em;
-    }
-
-    .section img {
+    .input-box input {
         width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 8px;
     }
 
-    .footer .nav-links a {
-        font-size: 0.7em;
+    .input-box input[type="submit"] {
+        background: black;
+        color: white;
+        cursor: pointer;
     }
 }
