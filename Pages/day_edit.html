@@ -7,6 +7,9 @@
   <link href="/Styles/day_edit.css" rel=stylesheet>
   <link href="/Styles/footer.css" rel=stylesheet>
   <link href="/Styles/header.css" rel=stylesheet>
+  <script src="../JavaScript/loadHeader.js"></script>
+  <script src="../JavaScript/loadFooter.js"></script>
+  <script src="../JavaScript/day_edit.js"></script>
   <title>Day Edit</title>
 
   <script src="/JavaScript/script.js"></script>
@@ -29,8 +32,11 @@
 
 <script>
 
-  loadTemplate("/Templates/header.html", "main_header")
-  loadTemplate("/Templates/footer.html", "main_footer")
+  Promise.all([loadTemplate("/Templates/header.html", "main_header"),
+  loadTemplate("/Templates/footer.html", "main_footer")]
+  ).then(() => {
+    load()
+  })
 
 </script>
 </body>

@@ -58,5 +58,10 @@
       "valor" : "86",
       "medida" : "kg"
     }
+  },
+  "day_info" :
+  {
+    "date" : "13/02/2025",
+    "rutine" : "Rutina Core advanced #2"
   }
 }
