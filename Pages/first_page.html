@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/index.css">
     <link rel="stylesheet" href="/Styles/first_page.css">
+    <script src="/JavaScript/loadHeader.js"></script>
+    <script src="/JavaScript/loadFooter.js"></script>
+    <script src="/JavaScript/first_page.js"></script>
 </head>
 <body>
 <header id="main_header"></header>
@@ -25,10 +28,13 @@
 <footer id="main_footer"></footer>
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
-    loadTemplate("/Templates/image_and_text.html", "image_text")
-    loadTemplate("/Templates/image_and_text.html", "image_text2")
+    Promise.all([loadTemplate("/Templates/header.html", "main_header"),
+    loadTemplate("/Templates/footer.html", "main_footer"),
+    loadTemplate("/Templates/image_and_text.html", "image_text"),
+    loadTemplate("/Templates/image_and_text.html", "image_text2")]
+    ).then(() => {
+      load()
+    })
 
 </script>
 </body>
