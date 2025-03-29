@@ -4,12 +4,14 @@ html, body
     display: flex;
     flex-direction: column;
 }
+
 main
 {
     display: grid;
     justify-content: center;
     flex: 1;
 }
+
 .title
 {
     text-align: center;

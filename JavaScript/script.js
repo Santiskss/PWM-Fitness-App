@@ -18,7 +18,7 @@ const routineFiles = {
 const typeSelector = document.getElementById("typeSelector");
 const routineSelector = document.getElementById("routineSelector");
 
-// Cargar tipos en el primer <select>
+
 function loadRoutineTypes() {
     Object.keys(routineFiles).forEach(type => {
         const option = document.createElement("option");
@@ -28,7 +28,6 @@ function loadRoutineTypes() {
     });
 }
 
-// Cargar nombres de rutinas del tipo seleccionado
 function loadRoutineNames(type) {
     fetch(routineFiles[type])
         .then(resp => resp.json())
@@ -90,7 +89,7 @@ routineSelector.addEventListener("change", () => {
     loadRoutine(type, index);
 });
 
-// Iniciar al cargar la página
+
 loadTemplate("../Templates/header.html", "main_header");
 loadTemplate("../Templates/footer.html", "main_footer");
 loadRoutineTypes();
