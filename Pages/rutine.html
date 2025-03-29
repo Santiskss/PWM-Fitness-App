@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/Styles/footer.css">
   <link rel="stylesheet" href="/Styles/info_exercise.css">
   <link rel="stylesheet" href="../Styles/rutine.css">
+  <script src="../JavaScript/loadHeader.js"></script>
+  <script src="../JavaScript/loadFooter.js"></script>
 </head>
 <body>
   <header id="main_header"></header>
@@ -30,4 +32,11 @@
   </main>
   <footer id="main_footer"></footer>
 </body>
+<script>
+  setTimeout(() => {
+    loadHeader()
+    loadFooter()
+  }, 500)
+
+</script>
 </html>
