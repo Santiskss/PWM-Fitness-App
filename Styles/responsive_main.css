@@ -1,12 +1,5 @@
 /* 412 px to 1280 px */
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
-    #imagenes {
-        width: 40em; /* Controla el tamaño con em */
-        height: auto; /* Mantiene la proporción */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
 
     .text-box p {
@@ -18,21 +11,25 @@
 /* under 412 px */
 @media screen and (max-width: 25.75em) {
     #imagenes {
-        width: 40em; /* Controla el tamaño con em */
-        height: auto; /* Mantiene la proporción */
+        width: 12em;
+        height: 7em;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 
 
     .text-box {
-        padding-inline: 0.5em;
+        width: 10em;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5em;
     }
 
     .text-box p {
         margin-inline: 1em;
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 0.5em;
     }
 }

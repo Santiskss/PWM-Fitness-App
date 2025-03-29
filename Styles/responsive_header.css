@@ -21,7 +21,7 @@
     .header_temp {
         background: linear-gradient(to bottom, rebeccapurple, mediumblue);
         height: 3.5em;
-        width: 100%;
+        width: auto;
     }
 
     nav {
@@ -52,7 +52,8 @@
     #foto_perf {
         height: 2em;
         width: 2em;
-        border-radius: 1em;
+        border-radius: 10em;
+        margin-right: 4em;
     }
 
 
