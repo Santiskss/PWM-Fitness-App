@@ -1,6 +1,5 @@
 function loadHeader()
 {
-    console.log("carga");
     fetch("../JSON/data.json").then(function(response) {
         return response.json();
     })

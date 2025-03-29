@@ -7,5 +7,39 @@
   [
     "Registrarse","Iniciar sesion"
   ],
-  "message_main_page" : "¡Transforma tu entrenamiento hoy mismo!\nCrea tu rutina personalizada en minutos y accede a entrenamientos pro diseñados por expertos. ¡Empieza ahora y lleva tu rendimiento al siguiente nivel!"
+  "message_main_page" : "¡Transforma tu entrenamiento hoy mismo!\nCrea tu rutina personalizada en minutos y accede a entrenamientos pro diseñados por expertos. ¡Empieza ahora y lleva tu rendimiento al siguiente nivel!",
+  "footer_text" :
+  [
+    "Terminos", "Comunidad", "Estado"
+  ],
+  "company_footer" :
+  [
+    "Sobre nosotros", "Personal", "Blog"
+  ],
+  "redes_sociales_footer" :
+  [
+    {
+      "name" : "instagram",
+      "imagen" : "../Resources/instagram_logo.png",
+      "link" : "https://www.instagram.com"
+    },
+
+    {
+      "name" : "facebook",
+      "imagen" : "../Resources/facebook_logo.png",
+      "link" : "https://www.facebook.com"
+    },
+
+    {
+      "name" : "twitter",
+      "imagen" : "../Resources/twitter_logo.png",
+      "link" : "https://www.x.com"
+    },
+
+    {
+      "name" : "tiktok",
+      "imagen" : "../Resources/tiktok_logo.png",
+      "link" : "https://www.tiktok.com"
+    }
+  ]
 }
