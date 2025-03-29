@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/Styles/responsive_profile.css" media="screen and (max-width: 1440px)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/JavaScript/script.js"></script>
+    <script src="../JavaScript/profile.js"></script>
+    <script src="../JavaScript/loadHeader.js"></script>
+    <script src="../JavaScript/loadFooter.js"></script>
     <title>Profile</title>
 
 
@@ -39,8 +42,14 @@
 
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
+    Promise.all(
+        [loadTemplate("/Templates/header.html", "main_header"),
+        loadTemplate("/Templates/footer.html", "main_footer")]
+    ).then(() => {
+        load()
+    })
+
+
 
 </script>
 </body>

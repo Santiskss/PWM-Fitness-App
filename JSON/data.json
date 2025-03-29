@@ -41,5 +41,22 @@
       "imagen" : "../Resources/tiktok_logo.png",
       "link" : "https://www.tiktok.com"
     }
-  ]
+  ],
+  "personal" :
+  {
+    "name" : "admin",
+    "correo" : "admin@correo.com",
+    "edad": "20",
+    "sexo" : "Hombre",
+    "altura" :
+    {
+      "valor": "183",
+      "medida": "cm"
+    },
+    "peso":
+    {
+      "valor" : "86",
+      "medida" : "kg"
+    }
+  }
 }

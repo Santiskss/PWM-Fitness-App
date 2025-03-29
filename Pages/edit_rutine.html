@@ -23,8 +23,13 @@
     <footer id="main_footer"></footer>
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
+    Promise.all(
+        [loadTemplate("/Templates/header.html", "main_header"),
+            loadTemplate("/Templates/footer.html", "main_footer")]
+    ).then(
+        
+    )
+
     load()
 
 </script>
