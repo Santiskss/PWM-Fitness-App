@@ -15,14 +15,14 @@
     justify-content: center;
 }
 
-#picture {
+.picture {
     width: 15em;
     height: 7em;
     background: lightgray;
     margin-right: 2em;
 }
 
-#info {
+.info {
     max-width: 400px;
     text-align: left;
 }

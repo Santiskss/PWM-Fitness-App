@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/index.css">
     <link rel="stylesheet" href="../Styles/pro_rutine.css">
+    <script src="../JavaScript/pro_rutine.js"></script>
+    <script src="../JavaScript/loadFooter.js"></script>
+    <script src="../JavaScript/loadHeader.js"></script>
 </head>
 <body>
 <header id="main_header"></header>
@@ -20,11 +23,17 @@
 <footer id="main_footer"></footer>
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
-    loadTemplate("/Templates/image_and_text.html", "image_text")
-    loadTemplate("/Templates/image_and_text.html", "image_text2")
-    loadTemplate("/Templates/image_and_text.html", "image_text3")
+    Promise.all([
+        loadTemplate("/Templates/header.html", "main_header"),
+        loadTemplate("/Templates/footer.html", "main_footer"),
+        loadTemplate("/Templates/image_and_text.html", "image_text"),
+        loadTemplate("/Templates/image_and_text.html", "image_text2"),
+        loadTemplate("/Templates/image_and_text.html", "image_text3")
+    ]).then(() => {
+        load()
+    });
+
+
 
 </script>
 </body>
