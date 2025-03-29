@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/Styles/info_exercise.css">
     <link rel="stylesheet" href="../Styles/create_rutine.css">
     <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/loadHeader.js"></script>
+    <script src="/JavaScript/loadFooter.js"></script>
+    <script src="/JavaScript/create_rutine.js"></script>
 </head>
 <body>
     <header id="main_header"></header>
@@ -24,11 +27,14 @@
     <footer id="main_footer"></footer>
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
-    loadTemplate("/Templates/info_exercise.html", "info_exercise")
-    loadTemplate("/Templates/info_exercise.html", "info_exercise2")
-    loadTemplate("/Templates/info_exercise.html", "info_exercise3")
+    Promise.all([loadTemplate("/Templates/header.html", "main_header"),
+    loadTemplate("/Templates/footer.html", "main_footer")]
+    ).then(() =>
+    {
+        load()
+    })
+
+
 
 </script>
 </body>
