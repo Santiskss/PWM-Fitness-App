@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/Styles/footer.css">
     <link rel="stylesheet" href="/Styles/add_exercise.css">
     <script src="/JavaScript/script.js"></script>
+    <script src="../JavaScript/loadFooter.js"></script>
+    <script src="../JavaScript/loadHeader.js"></script>
+    <script src="../JavaScript/add_exercise.js"></script>
 </head>
 <body>
 
@@ -29,8 +32,12 @@
 
 <script>
 
-    loadTemplate("/Templates/header.html", "main_header")
-    loadTemplate("/Templates/footer.html", "main_footer")
+    Promise.all([loadTemplate("/Templates/header.html", "main_header"),
+    loadTemplate("/Templates/footer.html", "main_footer")]
+    ).then(() => {
+        load()
+    })
+
 
 </script>
 
