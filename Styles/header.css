@@ -9,6 +9,7 @@
 {
     display: flex;
     background: linear-gradient(to bottom, #191970, mediumblue);
+    width: auto;
 }
 #logo
 {

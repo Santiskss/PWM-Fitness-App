@@ -7,10 +7,14 @@
 }
 
 /* under 412 px*/
-@media screen and (max-width: 412px) {
-
+@media screen and (max-width: 25.75em) {
     .footer_texts {
         display: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
 
     .footer_temp {
@@ -20,22 +24,20 @@
 
     /* Logo + círculos en la misma línea */
     .footer_temp > div:first-child {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #333;
+        justify-content: center;
     }
 
     .footer_temp > div:first-child > section {
         flex: none;
-        text-align: left;
+        text-align: center;
     }
 
     .footer_temp > div:first-child > section h2 {
         font-size: 1.2em;
-        margin: 0;
+        text-align: center;
+        margin: 0 auto;
     }
 
     /* Círculos (ya están en div > div por defecto) */
