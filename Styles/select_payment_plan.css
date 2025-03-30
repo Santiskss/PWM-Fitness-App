@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -49,6 +54,7 @@ th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    font-size: 20px;
     background-color: white;
 }
 

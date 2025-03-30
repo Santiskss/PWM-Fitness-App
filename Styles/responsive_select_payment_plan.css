@@ -1,48 +1,50 @@
 
 /*412 px to 1280 px*/
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
-    .questions {
-        width: 90%;
-        max-width: 60em;
-        height: auto;
+    .rectangles {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border: 0.1em solid black;
-        margin: auto;
+        gap: 0.625em;
     }
 
-    .half-left {
-        width: 50%;
-        background-color: white;
+    .buttons {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2em;
+        gap: 0.625em;
+        margin-top: 2.5em;
+    }
+
+    .questions {
+        width: 93.75em;
+        height: 31.25em;
+        margin-bottom: 1em;
     }
 
     .half-right {
-        width: 50%;
-        background-color: lightgray;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 1em;
+        width: 46.875em;
+        height: 31.25em;
+        float: right;
+    }
+
+    .half-left {
+        width: 46.875em;
+        height: 31.25em;
+        float: left;
+        text-align: center;
     }
 
     table {
-        width: auto;
         border-collapse: collapse;
-        text-align: right;
-        margin-left: auto;
+        width: 100%;
+        text-align: center;
     }
 
-
-    th, td {
-        border: 0.1em solid black;
-        padding: 0.5em;
+    th {
         text-align: left;
+        padding: 0.5em;
+        font-size: 0.6em;
+    }
+
+    p {
+        margin-bottom: 0.625em;
     }
 
 }
@@ -59,18 +61,20 @@
     }
 
     .questions {
-        width: 100%;
+        width: auto;
         height: auto;
         flex-direction: column;
     }
 
     .half-right, .half-left {
-        width: 100%;
+        width: auto;
         height: auto;
         padding: 1em;
     }
 
     th {
         text-align: center;
+        font-size: 0.5em;
+        width: 100%;
     }
 }
