@@ -11,6 +11,7 @@ function load()
             for (let i = 0; i < rutinas.length; i++)
             {
                 rutinas[i].textContent = json[i*3].description
+                document.querySelectorAll("#picture")[i].src = "/Resources/today_image.webp"
 
             }
         })
