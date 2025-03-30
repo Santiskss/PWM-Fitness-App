@@ -1,0 +1,16 @@
+
+/*412 px to 1280 px*/
+@media screen and (min-width: 25.75em) and (max-width: 80em) {
+
+
+
+}
+
+/* under 412 px*/
+@media screen and (max-width: 25.75em) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
