@@ -1,4 +1,4 @@
-const clave = localStorage.getItem("jwt")
+const clave = sessionStorage.getItem("jwt")
 if(clave)
 {
     location.replace("http://localhost:63342/PWM-Fitness-App/Pages/first_page.html")
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () =>
         if (response.ok)
         {
             alert("Cuenta creada correctamente")
-            localStorage.setItem("jwt", data.token)
+            sessionStorage.setItem("jwt", data.token)
             location.replace("http://localhost:63342/PWM-Fitness-App/Pages/first_page.html")
         }
         else
