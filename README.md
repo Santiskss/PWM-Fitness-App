@@ -20,7 +20,9 @@
 - Tener varios roles usuario, profesional, etc.
 ## Mockups y Storyboard
 
-<p>Mockup -> /Figma/Mockups </p>
+<p>Mockup_Desktop -> /Figma/Mockups/Desktop </p>
+<p>Mockup_Tablet -> /Figma/Mockups/Tablet </p>
+<p>Mockup_Mobile -> /Figma/Mockups/Mobile </p>
 
 >[!NOTE]
 En esta carpeta se encuentran todos los png de los mockups</p>
@@ -65,6 +67,25 @@ En esta carpeta se encuentran todos los png de los mockups</p>
 - Select_Payment_Plan.html -> Select_Payment_Plan
 - Payment.html -> Payment
 
+## Formularios
+<p>Se han implementado dos formularios:</p>
+
+- Login
+  - Formulario donde puedes iniciar sesion con correo y contraseña
+  - Validaciones
+    - Comprueba que la contraseña tenga una longitud minima(8 caracteres)
+    - Comprueba que el correo electronico usado este en la base de datos
+    - Comprueba que la contraseña introducida sea identica a la que hay guardada en la base de datos
+- Registro
+  - Formulario donde se pueden registrar nuevos usuarios introduciendo nombre, correo electronico, contraseña y repetición de contraseña
+  - Validacion
+    - Comprueba que la contraseña tenga una longitud minima(8 caracteres)
+    - Comprueba que la contraseña y la contraseña repetida sean iguales
+
+## Acceso a Strapi
+> Si desea acceder a Strapi Tiene los siguientes datos para acceder
+- Correo = admin@gmail.com
+- Contraseña = 1234qweR
 ## Enlaces
 [![Figma](https://img.shields.io/badge/Figma-8A2BE2)](https://www.figma.com/design/bZUSWn9qFARirKdOZZI1BM/TrainFlow?node-id=0-1&t=9nisu3xCd40wWV6j-1)
 [![Trello](https://img.shields.io/badge/Trello-198500FF)](https://trello.com/invite/b/67ab8943e46d194ce6fce3c8/ATTIfd9e6fbd2b77e614d7d34a565e749f6275992BDE/pwm)
