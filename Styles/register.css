@@ -3,6 +3,8 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 main {
@@ -19,7 +21,13 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 2em;
-    margin-left: 17em;
+    margin-left: 32.5em;
 }
 
-
+.wrapper h2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30em;
+}

@@ -1,27 +1,8 @@
 
 /*412 px to 1280 px*/
-@media screen and (min-width: 25.75em) and (max-width: 80em) {
-    .header_temp{
-        height: 3em;
-        width: auto;
-    }
-    #logo {
-        font-size: 1.5em;
-        text-align: left;
-        margin-top: 0.5em;
-        margin-left: 0.75em;
-    }
-
-    #foto_perf {
-        height: 1.5em;
-        width: 1.5em;
-    }
-}
-
-/* under 412 px*/
 @media screen and (max-width: 25.75em) {
     .header_temp {
-        height: 3.5em;
+        height: 3.5em;   /* Altura de la cabecera */
         width: auto;
     }
 
@@ -34,7 +15,7 @@
     }
 
     #logo {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Tamaño del logo */
         text-align: left;
         margin-top: 0.5em;
         margin-left: 0.75em;
@@ -45,7 +26,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
-        position: absolute;
         top: 0.5em;
         right: 0;
     }
@@ -53,9 +33,9 @@
     #foto_perf {
         height: 2em;
         width: 2em;
-        border-radius: 5em;
-        margin-right: 1em;
+        border-radius: 10em;
+        top: 1em;
+        right: 1em;
+        margin-right: 17em;
     }
-
-
 }
