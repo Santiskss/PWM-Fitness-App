@@ -22,6 +22,7 @@ function load()
             temp = "<p class='info'>Peso: " + personal.peso.valor + personal.peso.medida+ "</p>"
             todo += temp
             document.querySelector(".rectangle").innerHTML = todo
+            document.querySelector("#icon").src = personal.image
 
         })
     loadFooter()

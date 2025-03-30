@@ -18,6 +18,7 @@ function load()
                 let prices = document.querySelectorAll("#price");
                 for (let i = 0; i < prices.length; i++) {
                     document.querySelectorAll("#price")[i].textContent = json.suscripciones.planes[i].precio
+                    document.querySelectorAll("#foto")[i].src = `/Resources/sub${i + 1}.png`
                 }
                 for (let i = 0; i < questions.length; i++) {
                     questions[i].textContent = json.suscripciones.preguntas[i].pregunta
