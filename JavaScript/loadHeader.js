@@ -16,6 +16,8 @@ function loadHeader()
                 logeo[i].textContent = myJson.logeo_header[i]
             }
 
+            document.querySelector("#foto_perf").src = myJson.personal.image
+
 
         })
 }
