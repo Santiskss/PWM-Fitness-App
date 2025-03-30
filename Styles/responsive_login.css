@@ -1,18 +1,5 @@
 /* (412px - 1280px) - Tablet */
 @media screen and (min-width: 25.75em) and (max-width: 80em) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body, html {
-        width: 100%;
-        overflow-x: hidden; /* Evita desplazamiento horizontal */
-        margin: 0;
-        padding: 0;
-    }
-
 
     .wrapper {
         width: 50%;
@@ -29,26 +16,30 @@
     }
 
     .input-box {
+        width: 10%;
         margin-bottom: 1.25em;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .input-box input {
-        width: 50%;
-        margin-right: 22em;
+        width: 300%;
+        margin-right: 15em;
+        margin-bottom: 3em;
+    }
+
+    .wrapper h2{
+        text-align: center;
+        margin-right: 27.5em;
     }
 
 }
 
 /* (menos de 412px) - Móvil */
 @media screen and (max-width: 25.75em) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -63,18 +54,18 @@
     }
 
     .input-box {
-        width: 100%;
+        width: 20em;
         display: flex;
         justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 1em;
     }
 
     .input-box input {
-        width: 10em;
-        padding: 0.8em;
-        border-radius: 0.5em;
-        text-align: center;
-        justify-content: center;
-        margin-right: 23.5em;
+        width: 7em;
+        margin-left: 12.5em;
+        margin-bottom: 2em;
     }
 
 }
