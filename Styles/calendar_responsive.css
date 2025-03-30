@@ -8,5 +8,14 @@
 
 /* under 412 px*/
 @media screen and (max-width: 25.75em) {
+    #calendar {
+        max-width: 100%;
+        border-width: 1px;
+        box-shadow: none;
+        margin: 20px auto;
+    }
 
+    main {
+        padding: 10px;
+    }
 }

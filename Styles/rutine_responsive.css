@@ -8,19 +8,13 @@
 
 /* under 412 px*/
 @media screen and (max-width: 25.75em) {
-    #ejercicios div {
+    #info {
         font-size: 0.85em;
         padding: 0.4em 0.8em;
     }
 
-    #add_exercise {
-        font-size: 0.7em;
-        padding: 0.4em 1em;
-        margin-inline: 1em;
-    }
-
     #title {
         font-size: 1.2em;
-        padding-inline: 0.5em;
     }
 }
+

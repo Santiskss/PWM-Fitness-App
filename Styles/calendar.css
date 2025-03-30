@@ -2,6 +2,7 @@ body, html
 {
     height: 100%;
     display: flex;
+    overflow-x: hidden;
     flex-direction: column;
 }
 main
@@ -13,14 +14,12 @@ main
     padding: 20px 10px;
     box-sizing: border-box;
 }
-#calendar{
-    #calendar {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        display: block;
-        margin: 60px auto;
-        border: 1px solid black;
-    }
-
+#calendar {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 60px auto;
+    border: 2px solid #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

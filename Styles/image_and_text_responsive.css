@@ -1,0 +1,16 @@
+@media (max-width: 412px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #picture {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #info {
+        font-size: 1em;
+        padding-top: 0.5em;
+    }
+}
