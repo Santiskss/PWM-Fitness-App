@@ -8,6 +8,11 @@
 
 /* under 412 px*/
 @media screen and (max-width: 25.75em) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     main {
         flex-direction: column;
         justify-content: center;
