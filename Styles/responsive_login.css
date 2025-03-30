@@ -26,8 +26,9 @@
     }
 
     .input-box input {
-        width: 30%;
-        margin-right: 45em;
+        width: 300%;
+        margin-right: 15em;
+        margin-bottom: 3em;
     }
 
     .wrapper h2{
@@ -39,11 +40,6 @@
 
 /* (menos de 412px) - Móvil */
 @media screen and (max-width: 25.75em) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -58,15 +54,18 @@
     }
 
     .input-box {
-        width: 100%;
+        width: 20em;
         display: flex;
         justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 1em;
     }
 
     .input-box input {
-        width: 10em;
-        text-align: center;
-        justify-content: center;
+        width: 7em;
+        margin-left: 12.5em;
+        margin-bottom: 2em;
     }
 
 }
