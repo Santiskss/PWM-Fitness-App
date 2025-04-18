@@ -1,0 +1,40 @@
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 700px;
+  padding: 20px;
+  text-align: center;
+}
+
+.wrapper h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 675px;
+}
+
+.input-box {
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 700px;
+}
+
+.input-box input {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.input-box input[type="submit"] {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
