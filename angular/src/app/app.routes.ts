@@ -3,9 +3,9 @@ import {MainPageComponent} from './components/pages/main-page/main-page.componen
 import {EditRutineComponent} from './components/pages/edit-rutine/edit-rutine.component';
 import {ProRutineComponent} from './components/pages/pro-rutine/pro-rutine.component';
 import {CreateRutineComponent} from './components/pages/create-rutine/create-rutine.component';
-import {ProfileComponent} from './components/profile/profile.component';
-import {LoginComponent} from './components/login/login.component';
-import {RegisterComponent} from './components/register/register.component';
+import {ProfileComponent} from './components/pages/profile/profile.component';
+import {LoginComponent} from './components/pages/login/login.component';
+import {RegisterComponent} from './components/pages/register/register.component';
 
 export const routes: Routes = [
   {path: '', title: "Main Page", component: MainPageComponent},
