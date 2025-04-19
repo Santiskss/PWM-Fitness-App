@@ -3,14 +3,14 @@ import {HeaderComponent} from '../../header/header.component';
 import {FooterComponent} from '../../footer/footer.component';
 
 @Component({
-  selector: 'app-create-rutine',
+  selector: 'app-add-exercise',
   imports: [
     HeaderComponent,
     FooterComponent
   ],
-  templateUrl: './create-rutine.component.html',
-  styleUrl: './create-rutine.component.css'
+  templateUrl: './add-exercise.component.html',
+  styleUrl: './add-exercise.component.css'
 })
-export class CreateRutineComponent {
+export class AddExerciseComponent {
 
 }

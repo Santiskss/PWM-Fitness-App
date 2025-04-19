@@ -3,14 +3,14 @@ import {HeaderComponent} from '../../header/header.component';
 import {FooterComponent} from '../../footer/footer.component';
 
 @Component({
-  selector: 'app-create-rutine',
+  selector: 'app-select-payment-plan',
   imports: [
     HeaderComponent,
     FooterComponent
   ],
-  templateUrl: './create-rutine.component.html',
-  styleUrl: './create-rutine.component.css'
+  templateUrl: './select-payment-plan.component.html',
+  styleUrl: './select-payment-plan.component.css'
 })
-export class CreateRutineComponent {
+export class SelectPaymentPlanComponent {
 
 }
