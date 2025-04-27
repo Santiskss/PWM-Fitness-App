@@ -1,40 +1,58 @@
-body, html {
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+#main_login {
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .wrapper {
-  max-width: 700px;
-  padding: 20px;
-  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
-.wrapper h2 {
+h2 {
+  text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 675px;
+  color: #333;
 }
 
 .input-box {
-  margin-bottom: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 700px;
+  margin-bottom: 20px;
 }
 
 .input-box input {
-  width: 500px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
 }
 
-.input-box input[type="submit"] {
-  background: black;
+.input-box input:focus {
+  border-color: #0066cc;
+}
+
+input[type="submit"] {
+  background-color: #0066cc;
   color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
   cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #004c99;
+}
+
+input:invalid {
+  border-color: red;
 }
