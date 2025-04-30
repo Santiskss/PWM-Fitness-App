@@ -23,6 +23,11 @@ export class RegisterComponent implements OnInit{
   constructor(private userService: UserService,
               private router: Router) {
     this.formReg = new FormGroup({
+      name: new FormControl(),
+      edad: new FormControl(),
+      sexo: new FormControl(),
+      altura: new FormControl(),
+      peso: new FormControl(),
       email: new FormControl(),
       password: new FormControl()
     })
@@ -34,6 +39,12 @@ export class RegisterComponent implements OnInit{
     this.userService.register(this.formReg.value)
       .then(response =>{
         console.log(response);
+        localStorage.setItem('userName', this.formReg.value.name);
+        localStorage.setItem('userAge', this.formReg.value.edad);
+        localStorage.setItem('userSex', this.formReg.value.sexo);
+        localStorage.setItem('userHeight', this.formReg.value.height);
+        localStorage.setItem('userWeight', this.formReg.value.weight);
+
         this.router.navigate(['/login']);
       })
       .catch(error => console.log(error));
