@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * rutine controller
+ * routine controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;

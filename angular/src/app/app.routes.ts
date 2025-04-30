@@ -9,7 +9,7 @@ import {RegisterComponent} from './components/pages/register/register.component'
 import {AddExerciseComponent} from './components/pages/add-exercise/add-exercise.component';
 import {CalendarComponent} from './components/pages/calendar/calendar.component';
 import {FirstPageComponent} from './components/pages/first-page/first-page.component';
-import {RutineComponent} from './components/pages/rutine/rutine.component';
+import {RoutineComponent} from './components/pages/routine/routine.component';
 import {SelectPaymentPlanComponent} from './components/pages/select-payment-plan/select-payment-plan.component';
 import {DayEditComponent} from './components/pages/day-edit/day-edit.component';
 import {PaymentComponent} from './components/pages/payment/payment.component';
@@ -18,16 +18,16 @@ export const routes: Routes = [
   {path: '', title: "Main Page", component: MainPageComponent},
   {path: 'add_exercise', title: "Register", component: AddExerciseComponent},
   {path: 'calendar', title: "Register", component: CalendarComponent},
-  {path: 'create-rutine', title: "Create Rutine", component: CreateRutineComponent},
+  {path: 'create-routine', title: "Create Rutine", component: CreateRutineComponent},
   {path: 'day-edit', title: "Day Edit", component: DayEditComponent},
-  {path: 'edit-rutine', title: "Edit Rutine", component: EditRutineComponent},
+  {path: 'edit-routine', title: "Edit Rutine", component: EditRutineComponent},
   {path: 'first-page', title: "Register", component: FirstPageComponent},
   {path: 'login', title: "Login", component: LoginComponent},
   {path: 'main-page', title: "Main Page", component: MainPageComponent},
   {path: 'payment', title: "Payment", component: PaymentComponent},
-  {path: 'pro-rutine', title: "Pro rutine", component: ProRutineComponent},
+  {path: 'pro-routine', title: "Pro routine", component: ProRutineComponent},
   {path: 'profile', title: "Profile", component: ProfileComponent},
   {path: 'register', title: "Register", component: RegisterComponent},
-  {path: 'rutine', title: "Rutine", component: RutineComponent},
+  {path: 'routine', title: "Routine", component: RoutineComponent},
   {path: 'select-payment-plan', title: "Select payment plan", component: SelectPaymentPlanComponent},
 ];

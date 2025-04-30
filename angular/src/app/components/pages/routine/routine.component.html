@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<section id="selectors">
+    <label for="typeSelector">Tipo de rutina:</label>
+    <select
+            id="typeSelector"
+            [(ngModel)]="selectedType"
+            (change)="onTypeChange()"
+    >
+        <option value="" disabled>— Elige tipo —</option>
+        <option *ngFor="let type of routineTypes" [value]="type">{{ type }}</option>
+    </select>
+
+    <label for="routineSelector">Rutina:</label>
+    <select
+            id="routineSelector"
+            [(ngModel)]="selectedRoutineId"
+            (change)="onRoutineChange()"
+    >
+        <option value="" disabled>— Elige rutina —</option>
+        <option *ngFor="let r of filteredRoutines" [value]="r.id">
+            {{ r.name }}
+        </option>
+    </select>
+</section>
+
+<main>
+    <h2 id="title">
+        {{ routineDetails?.name || 'Rutina' }}
+    </h2>
+
+    <p id="info">
+        {{ routineDetails?.description || 'Selecciona una rutina para ver los ejercicios' }}
+    </p>
+
+    <div id="details" *ngIf="routineDetails">
+        <p *ngIf="routineDetails.duration">
+            Duración: {{ routineDetails.duration }}
+        </p>
+
+        <ul>
+            <li *ngFor="let exercises of routineDetails.exercises">
+                {{ exercises.name }} — {{ exercises.reps }}
+            </li>
+        </ul>
+    </div>
+</main>
+
+<app-footer></app-footer>
