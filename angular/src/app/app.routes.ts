@@ -21,7 +21,7 @@ export const routes: Routes = [
   {path: 'create-rutine', title: "Create Rutine", component: CreateRutineComponent},
   {path: 'day-edit', title: "Day Edit", component: DayEditComponent},
   {path: 'edit-rutine', title: "Edit Rutine", component: EditRutineComponent},
-  {path: 'first-page', title: "Register", component: FirstPageComponent},
+  {path: 'first-page', title: "First_Page", component: FirstPageComponent},
   {path: 'login', title: "Login", component: LoginComponent},
   {path: 'main-page', title: "Main Page", component: MainPageComponent},
   {path: 'payment', title: "Payment", component: PaymentComponent},

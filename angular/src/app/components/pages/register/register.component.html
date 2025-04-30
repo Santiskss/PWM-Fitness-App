@@ -1,26 +1,26 @@
 <app-header/>
-<main>
-  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+<main *ngIf="formReg">
+  <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <!--
     <div class="mb-3">
       <label class="form-label">Name</label>
       <input type="text" class="form-control" formControlName="name">
     </div>
+    -->
     <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="text" class="form-control" formControlName="email">
+    <label class="form-label">Email</label>
+    <input type="text" class="form-control" formControlName="email">
     </div>
     <div class="mb-3">
       <label class="form-label">Password</label>
       <input type="password" class="form-control" formControlName="password">
     </div>
+    <!--
     <div class="mb-3">
       <label class="form-label">Repeat Password</label>
       <input type="password" class="form-control" formControlName="password_confirmation">
     </div>
-
-    <div *ngIf="formulario.get('password')?.dirty && formulario.get('password_confirmation')?.dirty && formulario.get('password')?.value !== formulario.get('password_confirmation')?.value" class="text-danger">
-      Las contraseñas no coinciden.
-    </div>
+    -->
 
     <input type="submit" value="Enviar" class="btn btn-info">
   </form>
