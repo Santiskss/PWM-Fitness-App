@@ -13,6 +13,8 @@ import {RoutineComponent} from './components/pages/routine/routine.component';
 import {SelectPaymentPlanComponent} from './components/pages/select-payment-plan/select-payment-plan.component';
 import {DayEditComponent} from './components/pages/day-edit/day-edit.component';
 import {PaymentComponent} from './components/pages/payment/payment.component';
+import {RoutineListComponent} from './components/pages/routine-list/routine-list.component';
+import {RoutineFormComponent} from './components/pages/routine-form/routine-form.component';
 
 export const routes: Routes = [
   {path: '', title: "Main Page", component: MainPageComponent},
@@ -29,5 +31,7 @@ export const routes: Routes = [
   {path: 'profile', title: "Profile", component: ProfileComponent},
   {path: 'register', title: "Register", component: RegisterComponent},
   {path: 'routine', title: "Routine", component: RoutineComponent},
+  {path: 'routineList', title: "RoutineList", component: RoutineListComponent},
+  { path: 'routineForm', title: "RoutineForm",component: RoutineFormComponent},
   {path: 'select-payment-plan', title: "Select payment plan", component: SelectPaymentPlanComponent},
 ];

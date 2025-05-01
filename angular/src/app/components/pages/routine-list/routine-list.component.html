@@ -1,0 +1,14 @@
+<h2>Mis Rutinas</h2>
+<button (click)="new()">Crear Rutina</button>
+
+<ul *ngIf="routines$ | async as routines; else loading">
+  <li *ngFor="let r of routines">
+    {{ r.name }}
+    <button (click)="edit(r.id)">Editar</button>
+    <button (click)="delete(r.id)">Eliminar</button>
+  </li>
+  <li *ngIf="routines.length === 0">No hay rutinas.</li>
+</ul>
+<ng-template #loading>
+  <p>Cargando rutinas…</p>
+</ng-template>
