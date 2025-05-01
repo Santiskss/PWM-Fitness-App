@@ -57,3 +57,32 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## TrainFlow
+
+## Componentes
+- **MainPage**: Muestra la página inicial desde la que hay acceso a diferentes apartados de la web.
+- **Login**: Permite a los usuarios acceder a sus cuentas.
+- **Register**: Permite a los usuarios crearse una cuenta nueva.
+- **Calendar**: Calendario que pueden ver para planificar sus rutinas.
+- **First-page**: Página a la que acceden los usuarios tras acceder a sus cuentas.
+- **Add-exercise**: Permite añadir nuevos ejercicios a las rutinas.
+- **Create-rutine**: Creación de rutinas nuevas por parte del usuario.
+- **Day-Edit**:
+- **Edit-Rutine**: Edición de rutinas creadas.
+- **Payment**: Pasarela de pago.
+- **Pro-rutine**:
+- **Routine**:
+- **Select-Payment-Plan**: Muestra los distintos planes que el usuario puede adquirir.
+
+## Servicios
+- **UserService**: Contiene las funciones necesarias para que un usuario pueda hacer login, registrarse, hacer logout o acceder a la web por medio e una cuenta de google.
+-  **RoutineService**:
+
+## Interfaces
+- **Exercise**: 
+- **Routine**:
+
+## Estrucutura de los datos en Firebase
+
+
