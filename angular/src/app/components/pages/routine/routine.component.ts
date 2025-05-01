@@ -6,9 +6,8 @@ import {HeaderComponent} from '../../header/header.component';
 import {NgForOf, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {RoutineService} from "../../../services/routine.service";
-import {Routine, RoutineType} from "../../../interfaces/routine";
+ import {Routine, RoutineType} from "../../../interfaces/routine";
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'app-routine',
@@ -49,7 +48,7 @@ export class RoutineComponent implements OnInit {
 
     this.routineSvc
       .getRoutinesByType(this.selectedType)
-      .subscribe(list => {
+      .subscribe((list: Routine[]) => {
         this.filteredRoutines = list;
         console.log('Rutinas por tipo:', list);
       });
@@ -64,9 +63,10 @@ export class RoutineComponent implements OnInit {
 
     this.routineSvc
       .getRoutine(this.selectedRoutineId)
-      .subscribe(r => {
+      .subscribe((r: any) => {
         this.routineDetails = r;
         console.log('Detalle rutina:', r);
       });
   }
 }
+

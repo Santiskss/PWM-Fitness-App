@@ -13,9 +13,10 @@ import {RoutineComponent} from './components/pages/routine/routine.component';
 import {SelectPaymentPlanComponent} from './components/pages/select-payment-plan/select-payment-plan.component';
 import {DayEditComponent} from './components/pages/day-edit/day-edit.component';
 import {PaymentComponent} from './components/pages/payment/payment.component';
+import {canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard';
 
 export const routes: Routes = [
-  {path: '', title: "Main Page", component: MainPageComponent},
+  {path: '', title: "Main Page", component: MainPageComponent, ...canActivate(()=> redirectUnauthorizedTo(['/register']))},
   {path: 'add_exercise', title: "Register", component: AddExerciseComponent},
   {path: 'calendar', title: "Register", component: CalendarComponent},
   {path: 'create-routine', title: "Create Rutine", component: CreateRutineComponent},

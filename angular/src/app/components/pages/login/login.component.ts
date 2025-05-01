@@ -40,4 +40,13 @@ export class LoginComponent implements OnInit{
       .catch(err => console.log(err));
   }
 
+  onclick(){
+    this.userService.loginwithgoogle()
+      .then(response =>{
+        console.log(response);
+        this.router.navigate(['/first-page']);
+      })
+    .catch(err => console.log(err));
+  }
+
 }
