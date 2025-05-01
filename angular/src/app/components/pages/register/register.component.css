@@ -1,26 +1,58 @@
-.form-control{
-  width: 70%;
+#main_login {
+  background-color: #f4f7fc;
   display: flex;
-  margin-left: 20px;
-  height: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-label{
-  margin-left: 20px;
+.wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
-.submit-button{
-  margin-left: 20px;
-
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.btn-info{
-  background-color: limegreen;
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #0066cc;
+}
+
+input[type="submit"] {
+  background-color: #0066cc;
   color: white;
-  border-color: limegreen;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
 }
 
-select.form-control option:first-child{
-  color: grey;
-  font-style: italic;
+input[type="submit"]:hover {
+  background-color: #004c99;
+}
+
+input:invalid {
+  border-color: red;
 }

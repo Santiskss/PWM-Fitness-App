@@ -1,28 +1,53 @@
 <app-header/>
-<main>
-  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+<main id="main_login">
+  <div class="wrapper">
+  <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label class="form-label">Name</label>
       <input type="text" class="form-control" formControlName="name">
     </div>
     <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="text" class="form-control" formControlName="email">
+      <label class="form-label">Age</label>
+      <input type="text" class="form-control" formControlName="edad">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Sexo</label>
+      <select class="form-control" formControlName="sexo">
+        <option value="" selected disabled>Selecciona tu género</option>
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+        <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Weight</label>
+      <input type="text" class="form-control" formControlName="peso">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Height</label>
+      <input type="text" class="form-control" formControlName="altura">
+    </div>
+
+    <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="text" class="form-control" formControlName="email">
     </div>
     <div class="mb-3">
       <label class="form-label">Password</label>
       <input type="password" class="form-control" formControlName="password">
     </div>
+    <!--
     <div class="mb-3">
       <label class="form-label">Repeat Password</label>
       <input type="password" class="form-control" formControlName="password_confirmation">
     </div>
-
-    <div *ngIf="formulario.get('password')?.dirty && formulario.get('password_confirmation')?.dirty && formulario.get('password')?.value !== formulario.get('password_confirmation')?.value" class="text-danger">
-      Las contraseñas no coinciden.
-    </div>
+    -->
 
     <input type="submit" value="Enviar" class="btn btn-info">
   </form>
+  </div>
 </main>
 <app-footer/>
