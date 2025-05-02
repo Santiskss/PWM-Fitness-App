@@ -32,7 +32,7 @@ export class RoutineListComponent implements OnInit {
   }
 
   edit(id?: string) {
-    if (id) this.router.navigate(['/routines', id, 'edit']);
+    if (id) this.router.navigate(['/routineForm', id]);
   }
 
   delete(id?: string) {

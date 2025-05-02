@@ -32,6 +32,7 @@ export const routes: Routes = [
   {path: 'register', title: "Register", component: RegisterComponent},
   {path: 'routine', title: "Routine", component: RoutineComponent},
   {path: 'routineList', title: "RoutineList", component: RoutineListComponent},
-  { path: 'routineForm', title: "RoutineForm",component: RoutineFormComponent},
+  { path: 'routineForm', title: "RoutineForm", component: RoutineFormComponent},
+  { path: 'routineForm/:id', title: "RoutineEdit", component: RoutineFormComponent },
   {path: 'select-payment-plan', title: "Select payment plan", component: SelectPaymentPlanComponent},
 ];
