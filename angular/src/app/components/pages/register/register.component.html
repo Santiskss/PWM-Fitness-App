@@ -1,20 +1,21 @@
 <app-header/>
 <main id="main_login">
   <div class="wrapper">
+    <h1 class="title">Registro</h1>
   <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
     <div class="mb-3">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-control" formControlName="name">
+      <label class="form-label"></label>
+      <input type="text" class="form-control" formControlName="name" placeholder="Name">
     </div>
     <div class="mb-3">
-      <label class="form-label">Age</label>
-      <input type="text" class="form-control" formControlName="edad">
+      <label class="form-label"></label>
+      <input type="text" class="form-control" formControlName="edad" placeholder="Age">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Sexo</label>
-      <select class="form-control" formControlName="sexo">
-        <option value="" selected disabled>Selecciona tu género</option>
+      <select class="form-control-s" formControlName="sexo" name="Sexo" required>
+        <option value="" disabled selected>Selecciona tu género</option>
         <option value="Hombre">Hombre</option>
         <option value="Mujer">Mujer</option>
         <option value="Prefiero no decirlo">Prefiero no decirlo</option>
@@ -22,22 +23,22 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Weight</label>
-      <input type="text" class="form-control" formControlName="peso">
+      <label class="form-label"></label>
+      <input type="text" class="form-control" formControlName="peso" placeholder="Peso">
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Height</label>
-      <input type="text" class="form-control" formControlName="altura">
+      <label class="form-label"></label>
+      <input type="text" class="form-control" formControlName="altura" placeholder="Altura">
     </div>
 
     <div class="mb-3">
-    <label class="form-label">Email</label>
-    <input type="text" class="form-control" formControlName="email">
+    <label class="form-label"></label>
+    <input type="text" class="form-control" formControlName="email" placeholder="Email">
     </div>
     <div class="mb-3">
-      <label class="form-label">Password</label>
-      <input type="password" class="form-control" formControlName="password">
+      <label class="form-label"></label>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
     </div>
 
 
