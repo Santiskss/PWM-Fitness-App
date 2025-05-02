@@ -15,6 +15,7 @@ import {NgIf} from '@angular/common';
     NgIf
   ],
   templateUrl: './register.component.html',
+  standalone: true,
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit{

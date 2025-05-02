@@ -3,13 +3,14 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {UserService} from '../../services/user.service';
 
 @Component({
-  selector: 'app-header',
-  imports: [
-    RouterLink,
-    RouterLinkActive
-  ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+    selector: 'app-header',
+    imports: [
+        RouterLink,
+        RouterLinkActive
+    ],
+    templateUrl: './header.component.html',
+    standalone: true,
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit{
   constructor(
