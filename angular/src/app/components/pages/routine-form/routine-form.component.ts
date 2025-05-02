@@ -68,7 +68,6 @@ export class RoutineFormComponent implements OnInit {
     const gp = this.form.value.bodyPart;
     this.es.listByGroup(gp).subscribe(exs => {
       this.exerciseOptions = exs;
-      this.exercisesArr.clear();
     });
   }
 
@@ -87,16 +86,18 @@ export class RoutineFormComponent implements OnInit {
   }
 
   private patchForm(r: CreatedRoutine) {
-    // Rellena los campos básicos
+    // 1) Patch de campos básicos, incl. bodyPart
     this.form.patchValue({
-      name:        r.name,
+      name:     r.name,
       description: r.description,
-      duration:    r.duration,
-      // Asume que el primer ejercicio determina el grupo para recargar opciones
-      bodyPart:    r.exercises[0]?.id ? '' : ''
+      duration: r.duration,
+      bodyPart: r.exercises[0]?.id   // ¡aquí ponemos el grupo inicial!
     });
 
-    // Inyecta ejercicios en el FormArray
+    // 2) Limpiar FormArray PARA EVITAR DUPLICADOS
+    this.exercisesArr.clear();
+
+    // 3) Rellenar FormArray con los ejercicios de la rutina
     r.exercises.forEach(ex => {
       this.exercisesArr.push(this.fb.group({
         id:   [ex.id],
@@ -106,7 +107,7 @@ export class RoutineFormComponent implements OnInit {
     });
   }
 
-  save() {
+  async save() {
     const v = this.form.value;
     const payload: CreatedRoutine = {
       name:        v.name,
@@ -116,11 +117,11 @@ export class RoutineFormComponent implements OnInit {
     };
 
     if (this.isEdit && this.editId) {
-      this.crs.updateRoutine(this.editId, payload)
-        .then(() => this.router.navigate(['/routines']));
+      await this.crs.updateRoutine(this.editId, payload);
     } else {
-      this.crs.addRoutine(payload)
-        .then(() => this.router.navigate(['/routines']));
+      await this.crs.addRoutine(payload);
     }
+// luego:
+    this.router.navigate(['routineList']);
   }
 }
