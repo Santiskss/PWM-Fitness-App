@@ -4,13 +4,17 @@ import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
 import {CreateRoutineService} from '../../../services/create-routine.service';
 import {Router} from '@angular/router';
 import {CreatedRoutine} from '../../../interfaces/created-routine';
+import {HeaderComponent} from '../../header/header.component';
+import {FooterComponent} from '../../footer/footer.component';
 
 @Component({
   selector: 'app-routine-list',
   imports: [
     NgIf,
     NgForOf,
-    AsyncPipe
+    AsyncPipe,
+    HeaderComponent,
+    FooterComponent
   ],
   templateUrl: './routine-list.component.html',
   styleUrl: './routine-list.component.css'

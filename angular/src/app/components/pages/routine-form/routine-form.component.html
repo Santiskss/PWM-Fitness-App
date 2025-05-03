@@ -1,3 +1,4 @@
+<app-header></app-header>
 <h2>{{ isEdit ? 'Editar' : 'Crear' }} Rutina</h2>
 <form [formGroup]="form" (ngSubmit)="save()">
   <!-- Campos básicos -->
@@ -19,12 +20,21 @@
   <!-- Listado de ejercicios seleccionados -->
   <div formArrayName="exercises">
     <div *ngFor="let ctrl of exercisesArr.controls; let i = index"
-         [formGroupName]="i">
-      {{ ctrl.value.name }}
+         [formGroupName]="i"
+         class="exercise-item">
+
+      <div class="exercise-name">
+        {{ ctrl.value.name }}
+      </div>
+
       <label>Reps</label>
       <input formControlName="reps" />
-      <button type="button" (click)="removeExercise(i)">×</button>
+
+      <button type="button" class="remove-btn" (click)="removeExercise(i)">
+        ×
+      </button>
     </div>
+
   </div>
 
   <!-- Dropdown para añadir ejercicios -->
@@ -42,3 +52,4 @@
     {{ isEdit ? 'Actualizar' : 'Guardar' }}
   </button>
 </form>
+<app-footer></app-footer>

@@ -7,12 +7,16 @@ import {CreateRoutineService} from '../../../services/create-routine.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UsedExercise} from '../../../interfaces/used-exercise';
 import {ExerciseService} from '../../../services/exercise-service.service';
+import {HeaderComponent} from '../../header/header.component';
+import {FooterComponent} from '../../footer/footer.component';
 
 @Component({
   selector: 'app-routine-form',
   imports: [
     ReactiveFormsModule,
-    NgForOf
+    NgForOf,
+    HeaderComponent,
+    FooterComponent
   ],
   templateUrl: './routine-form.component.html',
   styleUrl: './routine-form.component.css'

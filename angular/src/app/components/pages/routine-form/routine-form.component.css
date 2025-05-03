@@ -1,0 +1,130 @@
+/* FORMULARIO */
+form {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+/* TÍTULO */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2a7ae2;
+}
+
+/* LABELS */
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+/* INPUTS, TEXTAREA, SELECT */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* BOTONES AZUL CLARO */
+button[type="submit"],
+button[type="button"] {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.6rem;
+  background-color: #add8e6;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #aaaaaa;
+  cursor: not-allowed;
+}
+
+/* LISTA DE EJERCICIOS */
+form [formArrayName="exercises"] {
+  margin-top: 1rem;
+}
+
+form [formArrayName="exercises"] > div[formGroupName] {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+/* CRUZ junto al nombre */
+form [formArrayName="exercises"] > div[formGroupName] button {
+  order: 1;
+  margin-left: 0.5rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+form [formArrayName="exercises"] > div[formGroupName] button:hover {
+  opacity: 0.9;
+}
+
+/* REPETICIONES alineadas a la derecha */
+form [formArrayName="exercises"] > div[formGroupName] label {
+  order: 2;
+  margin: 0;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+form [formArrayName="exercises"] > div[formGroupName] input {
+  order: 3;
+  width: 3rem;
+  margin-left: 0.5rem;
+}
+
+/* Separa cada ejercicio un poco del resto */
+.exercise-item {
+  margin-bottom: 1.5rem;
+}
+
+/* Nombre destacado: más grande, negrita y con espacio debajo */
+.exercise-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  /* si quieres color:
+     color: #2a7ae2;
+  */
+}
+
+
