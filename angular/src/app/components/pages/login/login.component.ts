@@ -4,7 +4,6 @@ import {FooterComponent} from '../../footer/footer.component';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {UserService} from '../../../services/user.service';
-import {response} from 'express';
 
 @Component({
   selector: 'app-login',

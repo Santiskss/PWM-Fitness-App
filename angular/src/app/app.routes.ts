@@ -15,6 +15,7 @@ import {DayEditComponent} from './components/pages/day-edit/day-edit.component';
 import {PaymentComponent} from './components/pages/payment/payment.component';
 import {RoutineListComponent} from './components/pages/routine-list/routine-list.component';
 import {RoutineFormComponent} from './components/pages/routine-form/routine-form.component';
+import {EditProfileComponent} from './components/pages/edit-profile/edit-profile.component';
 
 export const routes: Routes = [
   {path: '', title: "Main Page", component: MainPageComponent},
@@ -35,4 +36,5 @@ export const routes: Routes = [
   { path: 'routineForm', title: "RoutineForm", component: RoutineFormComponent},
   { path: 'routineForm/:id', title: "RoutineEdit", component: RoutineFormComponent },
   {path: 'select-payment-plan', title: "Select payment plan", component: SelectPaymentPlanComponent},
+  {path: 'edit-profile', title: "Edit Profile", component: EditProfileComponent},
 ];

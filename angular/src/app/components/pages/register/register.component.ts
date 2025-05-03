@@ -40,6 +40,7 @@ export class RegisterComponent implements OnInit{
     this.userService.register(this.formReg.value)
       .then(response =>{
         console.log(response);
+        alert("Registro exitoso");
         localStorage.setItem('userName', this.formReg.value.name);
         localStorage.setItem('userAge', this.formReg.value.edad);
         localStorage.setItem('userSex', this.formReg.value.sexo);
@@ -48,6 +49,9 @@ export class RegisterComponent implements OnInit{
 
         this.router.navigate(['/login']);
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        console.log(error)
+        alert(error);
+  });
   }
 }

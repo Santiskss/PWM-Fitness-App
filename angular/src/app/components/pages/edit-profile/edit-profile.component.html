@@ -1,0 +1,40 @@
+<app-header/>
+<main id="main_login">
+  <div class="wrapper">
+    <h1 class="title">Editar Perfil</h1>
+    <form [formGroup]="profileForm" (ngSubmit)="onSave()">
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Nombre">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Edad</label>
+        <input type="number" class="form-control" formControlName="edad" placeholder="Edad">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Sexo</label>
+        <select class="form-control-s" formControlName="sexo">
+          <option value="" disabled selected>Selecciona tu género</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Altura (cm)</label>
+        <input type="text" class="form-control" formControlName="altura" placeholder="Altura">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Peso (kg)</label>
+        <input type="text" class="form-control" formControlName="peso" placeholder="Peso">
+      </div>
+
+      <input type="submit" value="Guardar" (click)="onSave()" class="btn btn-info">
+    </form>
+  </div>
+</main>
+<app-footer/>
