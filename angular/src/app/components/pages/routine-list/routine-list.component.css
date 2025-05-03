@@ -17,6 +17,7 @@
   gap: 1rem;
   list-style: none;
   padding: 0;
+  margin-bottom: 1em;
 }
 
 /* Cada tarjeta */
@@ -57,4 +58,10 @@
 /* Eliminar – rojo */
 .delete-btn {
   background-color: #dc3545;
+}
+#crea-rutina
+{
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
 }
