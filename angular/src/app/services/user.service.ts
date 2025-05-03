@@ -58,8 +58,9 @@ export class UserService {
   }
 
   async updateUserProfile(userId:string, data:any) {
+    const {email, ...rest} = data;
     const userRef = doc(this.firestore, `users/${userId}`);
-    await setDoc(userRef, data);
+    await setDoc(userRef, rest, {merge: true});
   }
 
 }
