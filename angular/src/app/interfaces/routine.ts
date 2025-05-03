@@ -9,10 +9,11 @@ export enum RoutineType {
 }
 
 export interface Routine {
-  id: string;
-  tipo: RoutineType;
+  id?: any;
+  tipo?: RoutineType;
   name: string;
   description: string;
   duration: string;
   exercises: Exercise[];
+  ownerUid?: string;
 }

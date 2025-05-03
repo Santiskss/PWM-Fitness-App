@@ -1,4 +1,3 @@
-/* Botón “Crear Rutina” – azul fuerte */
 .new-btn {
   background-color: #0056b3;
   color: #fff;
@@ -10,7 +9,6 @@
   margin-bottom: 2rem;
 }
 
-/* Lista vertical de tarjetas */
 .routine-list {
   display: flex;
   flex-direction: column;
@@ -20,7 +18,6 @@
   margin-bottom: 1em;
 }
 
-/* Cada tarjeta */
 .routine-card {
   display: flex;
   justify-content: space-between;
@@ -32,14 +29,12 @@
   margin: 0 auto;
 }
 
-/* Nombre destacado */
 .routine-name {
   font-weight: bold;
   font-size: 1.1rem;
   text-align: left;
 }
 
-/* Contenedor de acciones */
 .routine-actions button {
   margin-left: 0.5rem;
   padding: 0.4rem 0.8rem;
@@ -50,15 +45,14 @@
   color: #fff;
 }
 
-/* Editar – azul más flojo */
 .edit-btn {
   background-color: #5dade2;
 }
 
-/* Eliminar – rojo */
 .delete-btn {
   background-color: #dc3545;
 }
+
 #crea-rutina
 {
   display: grid;

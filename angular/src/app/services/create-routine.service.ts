@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {CreatedRoutine} from '../interfaces/created-routine';
 import {Observable} from 'rxjs';
 import {
   addDoc,
@@ -11,6 +10,8 @@ import {
   Firestore,
   updateDoc
 } from '@angular/fire/firestore';
+import {Auth} from '@angular/fire/auth';
+import {Routine} from '../interfaces/routine';
 
 @Injectable({
   providedIn: 'root'
@@ -18,24 +19,26 @@ import {
 export class CreateRoutineService {
   private readonly basePath = 'user_routines';
 
-  constructor(private readonly firestore: Firestore) {}
+  constructor(private readonly firestore: Firestore, private auth: Auth) {}
 
-  getRoutines(): Observable<CreatedRoutine[]> {
+  getRoutines(): Observable<Routine[]> {
     const colRef = collection(this.firestore, this.basePath);
-    return collectionData(colRef, { idField: 'id' }) as Observable<CreatedRoutine[]>;
+    return collectionData(colRef, { idField: 'id' }) as Observable<Routine[]>;
   }
 
-  getRoutine(id: string): Observable<CreatedRoutine> {
+  getRoutine(id: string): Observable<Routine> {
     const docRef = doc(this.firestore, this.basePath, id);
-    return docData(docRef, { idField: 'id' }) as Observable<CreatedRoutine>;
+    return docData(docRef, { idField: 'id' }) as Observable<Routine>;
   }
 
-  addRoutine(r: CreatedRoutine): Promise<void> {
-    const colRef = collection(this.firestore, this.basePath);
-    return addDoc(colRef, r).then(() => {});
-  }
+  async addRoutine(r: Routine): Promise<void> {
+    const user = this.auth.currentUser;
+    if (!user) throw new Error('Debes estar logueado');
+      const colRef = collection(this.firestore, this.basePath);
+      await addDoc(colRef, {...r, ownerUid: user.uid});
+    }
 
-  updateRoutine(id: string, r: Partial<CreatedRoutine>): Promise<void> {
+  updateRoutine(id: string, r: Partial<Routine>): Promise<void> {
     const docRef = doc(this.firestore, this.basePath, id);
     return updateDoc(docRef, r);
   }

@@ -33,8 +33,6 @@ export class RoutineComponent implements OnInit {
   constructor(private readonly routineSvc: RoutineService) {}
 
   ngOnInit(): void {
-    // Opcional: precargar todas las rutinas si lo necesitas
-    // this.routineSvc.getRoutines().subscribe(r => console.log('Todas:', r));
   }
 
   onTypeChange(): void {

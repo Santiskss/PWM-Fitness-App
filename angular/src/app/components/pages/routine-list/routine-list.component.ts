@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
+import {map, Observable, of, switchMap} from 'rxjs';
 import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
 import {CreateRoutineService} from '../../../services/create-routine.service';
 import {Router} from '@angular/router';
-import {CreatedRoutine} from '../../../interfaces/created-routine';
 import {HeaderComponent} from '../../header/header.component';
 import {FooterComponent} from '../../footer/footer.component';
+import {Auth, authState} from '@angular/fire/auth';
+import {Routine} from '../../../interfaces/routine';
+import {RoutineService} from '../../../services/routine.service';
 
 @Component({
   selector: 'app-routine-list',
@@ -20,18 +22,25 @@ import {FooterComponent} from '../../footer/footer.component';
   styleUrl: './routine-list.component.css'
 })
 export class RoutineListComponent implements OnInit {
-  routines$!: Observable<CreatedRoutine[]>;
+  routines$!: Observable<Routine[]>;
 
-  constructor(private crs: CreateRoutineService, private router: Router) {
+
+  constructor(private crs: CreateRoutineService, private router: Router, private auth: Auth, private routineSvc: RoutineService) {
   }
 
   ngOnInit() {
-    this.routines$ = this.crs.getRoutines();
+    this.routines$ = authState(this.auth).pipe(
+      switchMap(user => {
+        if (!user) return of([] as Routine[]);
+        return this.routineSvc.getCreatedRoutines().pipe(
+          map(all => all.filter(r => r.ownerUid === user.uid))
+        );
+      })
+    );
   }
 
   new() {
     this.router.navigate(['/routineForm']).then(r => {
-      // Optional: handle the navigation result if necessary
     });
   }
 
@@ -44,7 +53,6 @@ export class RoutineListComponent implements OnInit {
     if (!confirm('¿Eliminar esta rutina?')) return;
     this.crs.deleteRoutine(id)
       .then(() => {
-        // opcional: mostrar toast
       })
       .catch(err => console.error(err));
   }

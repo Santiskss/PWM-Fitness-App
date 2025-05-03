@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgForOf} from '@angular/common';
-import {CreatedRoutine} from '../../../interfaces/created-routine';
 import {Observable, switchMap} from 'rxjs';
 import {CreateRoutineService} from '../../../services/create-routine.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {UsedExercise} from '../../../interfaces/used-exercise';
 import {ExerciseService} from '../../../services/exercise-service.service';
 import {HeaderComponent} from '../../header/header.component';
 import {FooterComponent} from '../../footer/footer.component';
+import {Exercise} from '../../../interfaces/exercise';
+import {Routine} from '../../../interfaces/routine';
 
 @Component({
   selector: 'app-routine-form',
@@ -24,7 +24,7 @@ import {FooterComponent} from '../../footer/footer.component';
 export class RoutineFormComponent implements OnInit {
   form!: FormGroup;
   groups: string[] = [];
-  exerciseOptions: UsedExercise[] = [];
+  exerciseOptions: Exercise[] = [];
   isEdit = false;
   private editId: string | null = null;
 
@@ -37,7 +37,6 @@ export class RoutineFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // 1) Inicializa el formulario SIN rest ni bodyPart persistido
     this.form = this.fb.group({
       name:        ['', Validators.required],
       description: [''],
@@ -46,10 +45,8 @@ export class RoutineFormComponent implements OnInit {
       exercises:   this.fb.array([])
     });
 
-    // 2) Carga los grupos para el dropdown
     this.es.listGroups().subscribe(gs => this.groups = gs);
 
-    // 3) Modo edición: si hay ID, precarga rutina y ejercicios
     this.route.paramMap.pipe(
       switchMap(params => {
         this.editId = params.get('id');
@@ -89,19 +86,16 @@ export class RoutineFormComponent implements OnInit {
     this.exercisesArr.removeAt(i);
   }
 
-  private patchForm(r: CreatedRoutine) {
-    // 1) Patch de campos básicos, incl. bodyPart
+  private patchForm(r: Routine) {
     this.form.patchValue({
       name:     r.name,
       description: r.description,
       duration: r.duration,
-      bodyPart: r.exercises[0]?.id   // ¡aquí ponemos el grupo inicial!
+      bodyPart: r.exercises[0]?.id
     });
 
-    // 2) Limpiar FormArray PARA EVITAR DUPLICADOS
     this.exercisesArr.clear();
 
-    // 3) Rellenar FormArray con los ejercicios de la rutina
     r.exercises.forEach(ex => {
       this.exercisesArr.push(this.fb.group({
         id:   [ex.id],
@@ -113,7 +107,7 @@ export class RoutineFormComponent implements OnInit {
 
   async save() {
     const v = this.form.value;
-    const payload: CreatedRoutine = {
+    const payload: Routine = {
       name:        v.name,
       description: v.description,
       duration:    v.duration,
@@ -125,7 +119,6 @@ export class RoutineFormComponent implements OnInit {
     } else {
       await this.crs.addRoutine(payload);
     }
-// luego:
     this.router.navigate(['routineList']);
   }
 }

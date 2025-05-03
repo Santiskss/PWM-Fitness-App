@@ -1,16 +1,15 @@
-/* Reset básico y tipografía global */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f5f7fa;
   color: #333;
 }
 
-/* Sección de selectores */
 #selectors {
   display: flex;
   flex-direction: column;
@@ -18,9 +17,11 @@ body {
   gap: 1.5em;
   margin: 2em auto;
 }
+
 #selectors label {
   font-weight: bold;
 }
+
 #selectors select {
   padding: 0.5em;
   border-radius: 6px;
@@ -29,7 +30,6 @@ body {
   min-width: 200px;
 }
 
-/* Contenedor principal */
 main {
   background-color: #fff;
   border-radius: 12px;
@@ -39,7 +39,6 @@ main {
   margin: 2em auto;
 }
 
-/* Título */
 #title {
   text-align: center;
   font-size: 1.8em;
@@ -47,7 +46,6 @@ main {
   margin-bottom: 0.5em;
 }
 
-/* Caja de información */
 #info {
   margin: 1em 0;
   background-color: #e1e7ef;
@@ -57,7 +55,6 @@ main {
   text-align: center;
 }
 
-/* Detalles de la rutina */
 #details p {
   text-align: center;
   font-size: 1.1em;
@@ -65,12 +62,12 @@ main {
   margin-bottom: 1em;
 }
 
-/* Lista de ejercicios */
 #details ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 #details ul li {
   background-color: #e6ecf3;
   padding: 1em;
