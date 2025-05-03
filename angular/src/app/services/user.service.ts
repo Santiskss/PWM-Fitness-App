@@ -1,16 +1,33 @@
 import { Injectable } from '@angular/core';
 import {Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
 signInWithPopup, GoogleAuthProvider} from '@angular/fire/auth';
+import {doc, Firestore, getDoc, setDoc} from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private auth: Auth) { }
+  constructor(private auth: Auth, private firestore: Firestore) { }
 
-  register({email, password}:any) {
-    return createUserWithEmailAndPassword(this.auth, email, password);
+  async register(userData:any) {
+    const {email, password, ...otherData} = userData;
+    const userCredential = await createUserWithEmailAndPassword(this.auth, email, password);
+    const userId = userCredential.user.uid;
+
+    const userDocRef = doc(this.firestore, `users/${userId}`);
+    await setDoc(userDocRef, {
+      email,
+      ...otherData
+    });
+
+    return userCredential;
+  }
+
+  async getUserProfile(userId:string) {
+    const userDoc = doc(this.firestore, `users/${userId}`);
+    const snapshot = await getDoc(userDoc);
+    return snapshot.exists() ? snapshot.data() : null;
   }
 
   login({email, password}:any) {
