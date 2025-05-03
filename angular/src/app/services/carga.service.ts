@@ -16,10 +16,14 @@ import {Observable} from 'rxjs';
 })
 export class CargaService {
   private readonly basePath = 'data';
-  constructor(private firestore: Firestore) { }
-  loadHeader()
-  {
-    const ref = doc(this.firestore, this.basePath, "contenido")
-    return docData(ref, {idField: 'id'}) as Observable<any>
+  cosas :Observable<any>
+  constructor(private firestore: Firestore) {
+    this.cosas = docData(doc(this.firestore, this.basePath, "contenido"), {idField: 'id'}) as Observable<any>
   }
+
+  loadData()
+  {
+    return this.cosas
+  }
+
 }

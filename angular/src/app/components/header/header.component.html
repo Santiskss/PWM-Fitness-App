@@ -1,13 +1,13 @@
 <header class="header_temp">
   <p id="logo">Logo</p>
   <nav>
-    <a routerLink="/create-rutine" class="enlaces">{{crea}}</a>
-    <a routerLink="/pro-rutine" class="enlaces">{{pro}}</a>
+    <a routerLink="/create-rutine" class="enlaces">{{datos_header.crea}}</a>
+    <a routerLink="/pro-rutine" class="enlaces">{{datos_header.pro}}</a>
   </nav>
   <div id="buttons">
     <div id="buttons-login">
-      <button class="logs" routerLink="/register">{{regis}}</button>
-      <button class="logs" routerLink="/login">{{logi}}</button>
+      <button class="logs" routerLink="/register">{{datos_header.regis}}</button>
+      <button class="logs" routerLink="/login">{{datos_header.logi}}</button>
       <button (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
     </div>
     <img id="foto_perf" src="/imagen_vertical.png" routerLink="/profile">

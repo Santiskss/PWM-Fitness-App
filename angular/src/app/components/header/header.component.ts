@@ -15,11 +15,13 @@ import {Observable} from 'rxjs';
     styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit{
-  datos?: Observable<any>
-  regis: string = ""
-  logi: string = ""
-  crea: string = ""
-  pro: string = ""
+  datos_header = {
+    regis: "",
+    logi: "",
+    pro:  "",
+    crea:  "",
+  }
+
   constructor(
     private userService: UserService,
     private  router: Router,
@@ -28,14 +30,12 @@ export class HeaderComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.carga.loadHeader().subscribe(val =>
+    this.carga.loadData().subscribe(val =>
     {
-      console.log(val)
-      this.datos = val
-      this.regis = val.logeo_header[0]
-      this.logi = val.logeo_header[1]
-      this.crea = val.nav_items_header[0]
-      this.pro = val.nav_items_header[1]
+      this.datos_header.regis = val.logeo_header[0]
+      this.datos_header.logi = val.logeo_header[1]
+      this.datos_header.crea = val.nav_items_header[0]
+      this.datos_header.pro = val.nav_items_header[1]
     })
   }
 
