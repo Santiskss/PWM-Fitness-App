@@ -22,12 +22,12 @@ export class ProRutineComponent implements OnInit{
   }
 
   ngOnInit(): void {
-        this.routineService.getRoutines().subscribe(rutinas =>
-        {
-          for (let i = 0; i < 40; i = i + 10) {
-            this.rutinas_pro.push(rutinas[i])
-          }
-        })
+    this.routineService.getRoutines().subscribe(rutinas => {
+      for (let i = 0; i < 40; i = i + 10) {
+        this.rutinas_pro.push(rutinas[i]);
+      }
+      console.log();
+    })
 
     }
 }
