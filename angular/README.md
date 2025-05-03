@@ -64,6 +64,7 @@ For more information on using the Angular CLI, including detailed command refere
 - **MainPage**: Muestra la página inicial desde la que hay acceso a diferentes apartados de la web.
 - **Login**: Permite a los usuarios acceder a sus cuentas.
 - **Register**: Permite a los usuarios crearse una cuenta nueva.
+- **Edit-Profile**: Da la opción al usuario de cambiar los datos de su perfil: nombre, edad, peso, altura.
 - **Calendar**: Calendario que pueden ver para planificar sus rutinas.
 - **First-page**: Página a la que acceden los usuarios tras acceder a sus cuentas.
 - **Add-exercise**: Permite añadir nuevos ejercicios a las rutinas.
@@ -82,7 +83,11 @@ For more information on using the Angular CLI, including detailed command refere
 ## Interfaces
 - **Exercise**: 
 - **Routine**:
+- **User**: Interfaz que representa los datos del usuario.
 
-## Estrucutura de los datos en Firebase
+## Estructuras de datos en firebase
+
+- **users**: En la base de datos se guardan el nombre, correo, edad, peso y altura indicados en el momento del registro. En caso de no indicarlo, saldrá un mensaje señalándolo.
+ ![users](public/users_database.png)
 
 

@@ -32,7 +32,10 @@ export class ProfileComponent implements OnInit {
 
   async ngOnInit() {
     onAuthStateChanged(this.userService['auth'], async (user) => {
-      if (user) {
+      if(!user){
+        this.router.navigate(['/login']);
+        return;
+      }
         const profile = await this.userService.getUserProfile(user.uid);
         if (profile) {
           this.userName = profile['name'] || 'No indicado';
@@ -42,7 +45,6 @@ export class ProfileComponent implements OnInit {
           this.userWeight = profile['peso'] || 'No indicado';
           this.userHeight = profile['altura'] || 'No indicado';
         }
-      }
 
     });
   }

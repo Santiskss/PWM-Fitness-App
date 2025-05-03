@@ -3,13 +3,15 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {UserService} from '../../services/user.service';
 import {CargaService} from '../../services/carga.service';
 import {Observable} from 'rxjs';
+import {Auth, onAuthStateChanged} from '@angular/fire/auth';
+import {NgIf} from '@angular/common';
 
 @Component({
     selector: 'app-header',
-    imports: [
-        RouterLink,
-        RouterLinkActive
-    ],
+  imports: [
+    RouterLink,
+    NgIf
+  ],
     templateUrl: './header.component.html',
     standalone: true,
     styleUrl: './header.component.css'
@@ -22,10 +24,13 @@ export class HeaderComponent implements OnInit{
     crea:  "",
   }
 
+  isLoggedIn: boolean = false;
+
   constructor(
     private userService: UserService,
     private  router: Router,
-    private carga: CargaService
+    private carga: CargaService,
+    private auth: Auth
   ) {
   }
 
@@ -36,7 +41,11 @@ export class HeaderComponent implements OnInit{
       this.datos_header.logi = val.logeo_header[1]
       this.datos_header.crea = val.nav_items_header[0]
       this.datos_header.pro = val.nav_items_header[1]
-    })
+    });
+
+    onAuthStateChanged(this.auth, (user) => {
+      this.isLoggedIn = !!user;
+    });
   }
 
   onClick(){

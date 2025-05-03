@@ -1,14 +1,17 @@
 <header class="header_temp">
   <p id="logo">Logo</p>
   <nav>
-    <a routerLink="/create-rutine" class="enlaces">{{datos_header.crea}}</a>
-    <a routerLink="/pro-rutine" class="enlaces">{{datos_header.pro}}</a>
+    <a routerLink="/routineForm" class="enlaces">{{datos_header.crea}}</a>
+    <a routerLink="/edit-routine" class="enlaces">{{datos_header.pro}}</a>
   </nav>
   <div id="buttons">
     <div id="buttons-login">
+      <ng-container *ngIf="!isLoggedIn">
       <button class="logs" routerLink="/register">{{datos_header.regis}}</button>
       <button class="logs" routerLink="/login">{{datos_header.logi}}</button>
-      <button (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
+      </ng-container>
+      <button *ngIf="isLoggedIn" (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
+
     </div>
     <img id="foto_perf" src="/imagen_vertical.png" routerLink="/profile">
   </div>
