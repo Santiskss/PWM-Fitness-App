@@ -16,7 +16,7 @@ import {Observable} from 'rxjs';
 })
 export class CargaService {
   private readonly basePath = 'data';
-  cosas :Observable<any>
+  private readonly cosas :Observable<any>
   constructor(private firestore: Firestore) {
     this.cosas = docData(doc(this.firestore, this.basePath, "contenido"), {idField: 'id'}) as Observable<any>
   }
