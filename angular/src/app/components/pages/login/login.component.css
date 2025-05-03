@@ -56,3 +56,10 @@ input[type="submit"]:hover {
 input:invalid {
   border-color: red;
 }
+#google_icon
+{
+  display: flex;
+  justify-self: center;
+  margin-block: 0.5em;
+
+}
