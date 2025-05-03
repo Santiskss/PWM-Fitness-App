@@ -15,7 +15,11 @@ export class FooterComponent implements OnInit{
     comunidad: "",
     nosotros: "",
     personal: "",
-    blog: ""
+    blog: "",
+    insta: {} as {imagen: "", link: ""},
+    face: {} as {imagen: "", link: ""},
+    twit: {} as {imagen: "", link: ""},
+    tik: {} as {imagen: "", link: ""},
 
   }
   constructor(private cargaService: CargaService) {  }
@@ -29,9 +33,16 @@ export class FooterComponent implements OnInit{
       this.datos_footer.nosotros = datos.company_footer[0]
       this.datos_footer.personal = datos.company_footer[1]
       this.datos_footer.blog = datos.company_footer[2]
+      this.datos_footer.insta = datos.redes_sociales_footer[0]
+      this.datos_footer.face = datos.redes_sociales_footer[1]
+      this.datos_footer.twit = datos.redes_sociales_footer[2]
+      this.datos_footer.tik = datos.redes_sociales_footer[3]
 
     })
   }
 
 
+  redirigir(link: string) {
+    window.open(link, '_blank');
+  }
 }
