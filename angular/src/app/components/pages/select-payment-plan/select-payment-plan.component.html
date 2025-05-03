@@ -5,33 +5,16 @@
     <button>Año</button>
   </div>
   <div class="rectangles">
-    <div class="sub" id="subscription"></div>
-    <div class="sub" id="subscription2"></div>
-    <div class="sub" id="subscription3"></div>
+    <app-subscription [price]="datos_sub.plan1.precio"/>
+    <app-subscription [price]="datos_sub.plan2.precio"/>
+    <app-subscription [price]="datos_sub.plan3.precio"/>
+
   </div>
   <div class="questions">
     <div class="half-right">
-      <table>
+      <table *ngFor="let pregunta of datos_sub.preguntas">
         <tr>
-          <th>Nunc luctus ex at ex.</th>
-        </tr>
-        <tr>
-          <th>Nunc luctus ex at ex.</th>
-        </tr>
-        <tr>
-          <th>Nunc luctus ex at ex.</th>
-        </tr>
-        <tr>
-          <th>Nunc luctus ex at ex.</th>
-        </tr>
-        <tr>
-          <th>Nunc luctus ex at ex.</th>
-        </tr>
-        <tr>
-          <th>Nunc luctus ex at ex.</th>
-        </tr>
-        <tr>
-          <th>Nunc luctus ex at ex.</th>
+          <th>{{pregunta.pregunta}}</th>
         </tr>
       </table>
     </div>

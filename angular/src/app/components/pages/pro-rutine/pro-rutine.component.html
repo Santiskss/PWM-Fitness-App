@@ -1,8 +1,9 @@
 <app-header/>
 <main>
   <h2 id="title">Pro Rutines</h2>
-  <div class="container" id="image_text"></div>
-  <div class="container" id="image_text2"></div>
-  <div class="container" id="image_text3"></div>
+  <div *ngFor="let rutina of rutinas_pro">
+    <app-image-and-text [texto]="rutina.description"/>
+  </div>
+
 </main>
 <app-footer/>

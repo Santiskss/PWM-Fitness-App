@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-image-and-text',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './image-and-text.component.css'
 })
 export class ImageAndTextComponent {
+  @Input() texto: string = ""
 
 }
