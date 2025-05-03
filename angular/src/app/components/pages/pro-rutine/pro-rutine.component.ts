@@ -27,7 +27,6 @@ export class ProRutineComponent implements OnInit{
           for (let i = 0; i < 40; i = i + 10) {
             this.rutinas_pro.push(rutinas[i])
           }
-          console.log(this.rutinas_pro)
         })
 
     }
