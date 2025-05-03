@@ -22,7 +22,8 @@ export class HeaderComponent implements OnInit{
     logi: "",
     pro:  "",
     crea:  "",
-    ver: ""
+    ver: "",
+    logo: ""
   }
 
   isLoggedIn: boolean = false;
@@ -43,6 +44,7 @@ export class HeaderComponent implements OnInit{
       this.datos_header.crea = val.nav_items_header[0]
       this.datos_header.ver = val.nav_items_header[1]
       this.datos_header.pro = val.nav_items_header[2]
+      this.datos_header.logo = val.logo
     });
 
     onAuthStateChanged(this.auth, (user) => {
@@ -58,6 +60,4 @@ export class HeaderComponent implements OnInit{
     .catch((error) => console.log(error));
   }
 
-  protected readonly window = window;
-  protected readonly location = location;
 }

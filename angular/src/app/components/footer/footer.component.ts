@@ -20,6 +20,8 @@ export class FooterComponent implements OnInit{
     face: {} as {imagen: "", link: ""},
     twit: {} as {imagen: "", link: ""},
     tik: {} as {imagen: "", link: ""},
+    logo: ""
+
 
   }
   constructor(private cargaService: CargaService) {  }
@@ -37,6 +39,7 @@ export class FooterComponent implements OnInit{
       this.datos_footer.face = datos.redes_sociales_footer[1]
       this.datos_footer.twit = datos.redes_sociales_footer[2]
       this.datos_footer.tik = datos.redes_sociales_footer[3]
+      this.datos_footer.logo = datos.logo
 
     })
   }
