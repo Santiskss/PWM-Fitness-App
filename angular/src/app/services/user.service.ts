@@ -57,4 +57,9 @@ export class UserService {
     return signOut(this.auth);
   }
 
+  async updateUserProfile(userId:string, data:any) {
+    const userRef = doc(this.firestore, `users/${userId}`);
+    await setDoc(userRef, data);
+  }
+
 }

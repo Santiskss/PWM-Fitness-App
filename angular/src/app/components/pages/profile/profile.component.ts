@@ -4,6 +4,7 @@ import {FooterComponent} from '../../footer/footer.component';
 import {isPlatformBrowser} from '@angular/common';
 import {UserService} from '../../../services/user.service';
 import {Auth, onAuthStateChanged} from '@angular/fire/auth';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -24,7 +25,8 @@ export class ProfileComponent implements OnInit {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
               private userService: UserService,
-              private auth: Auth) {
+              private auth: Auth,
+              private router: Router) {
 
   }
 
@@ -43,5 +45,9 @@ export class ProfileComponent implements OnInit {
       }
 
     });
+  }
+
+  gotoEdit() {
+    this.router.navigate(['/edit-profile']);
   }
 }
