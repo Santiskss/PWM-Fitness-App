@@ -3,7 +3,7 @@ import {HeaderComponent} from '../../header/header.component';
 import {FooterComponent} from '../../footer/footer.component';
 import {isPlatformBrowser} from '@angular/common';
 import {UserService} from '../../../services/user.service';
-import {Auth} from '@angular/fire/auth';
+import {Auth, onAuthStateChanged} from '@angular/fire/auth';
 
 @Component({
   selector: 'app-profile',
@@ -14,7 +14,7 @@ import {Auth} from '@angular/fire/auth';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent implements OnInit{
+export class ProfileComponent implements OnInit {
   userName: string = '';
   userAge: number = 0;
   userEmail: string = '';
@@ -29,19 +29,19 @@ export class ProfileComponent implements OnInit{
   }
 
   async ngOnInit() {
-    if(isPlatformBrowser(this.platformId)) {
-      const user = this.auth.currentUser;
-      if(user) {
+    onAuthStateChanged(this.userService['auth'], async (user) => {
+      if (user) {
         const profile = await this.userService.getUserProfile(user.uid);
-        if(profile) {
-          this.userName = profile['name'] || '';
-          this.userEmail = profile['email'] || '';
-          this.userAge = profile['edad'] || 0;
-          this.userSex = profile['sexo'] || '';
-          this.userWeight = profile['peso'] || 0;
-          this.userHeight = profile['altura'] || 0;
+        if (profile) {
+          this.userName = profile['name'] || 'No indicado';
+          this.userEmail = profile['email'] || 'No indicado';
+          this.userAge = profile['edad'] || 'No indicado';
+          this.userSex = profile['sexo'] || 'No indicado';
+          this.userWeight = profile['peso'] || 'No indicado';
+          this.userHeight = profile['altura'] || 'No indicado';
         }
       }
-    }
+
+    });
   }
 }

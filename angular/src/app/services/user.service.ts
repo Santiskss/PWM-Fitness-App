@@ -34,8 +34,23 @@ export class UserService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
-  loginwithgoogle(){
-    return signInWithPopup(this.auth, new GoogleAuthProvider());
+  async loginwithgoogle(){
+    const response = await signInWithPopup(this.auth, new GoogleAuthProvider());
+    const user = response.user;
+    const userRef = doc(this.firestore, `users/${user.uid}`);
+    const snapshot = await getDoc(userRef);
+
+    if(!snapshot.exists()){
+      await setDoc(userRef, {
+        email: user.email,
+        name: user.displayName || 'Usuario',
+        edad: '',
+        sexo: '',
+        altura: '',
+        peso: ''
+      });
+    }
+    return response;
   }
 
   logout() {
