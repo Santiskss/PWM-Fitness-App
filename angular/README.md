@@ -60,6 +60,8 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## TrainFlow
 
+Para probar el proyecto, ejecute "cd angular" y luego "ng serve"
+
 ## Componentes
 - **MainPage**: Muestra la página inicial desde la que hay acceso a diferentes apartados de la web.
 - **Login**: Permite a los usuarios acceder a sus cuentas.
