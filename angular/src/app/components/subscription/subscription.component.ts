@@ -8,5 +8,6 @@ import {Component, Input} from '@angular/core';
 })
 export class SubscriptionComponent {
   @Input() price: string = '';
+  @Input() imagen: string = '';
 
 }

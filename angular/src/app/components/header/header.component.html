@@ -1,5 +1,5 @@
 <header class="header_temp">
-  <p id="logo">Logo</p>
+  <p id="logo" routerLink="/first-page">Logo</p>
   <nav>
     <a routerLink="/routineForm" class="enlaces">{{datos_header.crea}}</a>
     <a routerLink="/pro-routine" class="enlaces">{{datos_header.pro}}</a>
@@ -14,7 +14,7 @@
       <button *ngIf="isLoggedIn" (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
 
     </div>
-    <img id="foto_perf" src="/imagen_vertical.png" routerLink="/profile">
+    <img id="foto_perf" src="/icono.avif" routerLink="/profile">
   </div>
 </header>
 

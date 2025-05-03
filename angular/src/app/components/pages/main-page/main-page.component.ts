@@ -15,7 +15,8 @@ import {CargaService} from '../../../services/carga.service';
 export class MainPageComponent implements OnInit{
   datos_main =
     {
-      mensaje: ""
+      mensaje: "",
+      foto: ""
 
     }
   constructor(private cargaService: CargaService) {
@@ -25,6 +26,7 @@ export class MainPageComponent implements OnInit{
         this.cargaService.loadData().subscribe(data =>
         {
           this.datos_main.mensaje = data.message_main_page
+          this.datos_main.foto = data.image_main_page
         })
     }
 

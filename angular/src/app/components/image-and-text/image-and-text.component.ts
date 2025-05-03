@@ -8,5 +8,6 @@ import {Component, Input} from '@angular/core';
 })
 export class ImageAndTextComponent {
   @Input() texto: string = ""
+  @Input() imagen: string = "";
 
 }

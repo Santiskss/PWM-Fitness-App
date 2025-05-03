@@ -21,9 +21,9 @@ interface pregTemp {
 })
 export class SelectPaymentPlanComponent implements OnInit{
   datos_sub = {
-    plan1: {precio: '', name: ''},
-    plan2: {precio: '', name: ''},
-    plan3: {precio: '', name: ''},
+    plan1: {precio: '', name: '', imagen: ''},
+    plan2: {precio: '', name: '', imagen: ''},
+    plan3: {precio: '', name: '', imagen: ''},
     preguntas: [] as {pregunta: string, respues: string}[]
   }
   constructor(private cargaService: CargaService) {

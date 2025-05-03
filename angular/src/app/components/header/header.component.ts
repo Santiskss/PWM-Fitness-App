@@ -57,4 +57,7 @@ export class HeaderComponent implements OnInit{
     })
     .catch((error) => console.log(error));
   }
+
+  protected readonly window = window;
+  protected readonly location = location;
 }

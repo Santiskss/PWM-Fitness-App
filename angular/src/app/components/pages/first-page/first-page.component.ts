@@ -17,7 +17,9 @@ import {CargaService} from '../../../services/carga.service';
 export class FirstPageComponent implements OnInit{
   datos_first = {
     texto_calendar: '',
-    texto_today: ''
+    texto_today: '',
+    img_today: '',
+    img_calendar: ''
   }
 
   constructor(private cargaService: CargaService,) {
@@ -26,7 +28,9 @@ export class FirstPageComponent implements OnInit{
     this.cargaService.loadData().subscribe(data =>
     {
       this.datos_first.texto_calendar = data.first_page.calendar;
+      this.datos_first.img_calendar = data.first_page.calendar_img;
       this.datos_first.texto_today = data.first_page.today;
+      this.datos_first.img_today = data.first_page.today_img;
     })
   }
 
