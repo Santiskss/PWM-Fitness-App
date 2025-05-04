@@ -122,6 +122,7 @@ Para probar el proyecto, ejecute "cd angular" y luego "ng serve"
 - **CreateRoutineService**: Contiene funciones necesarias para leer, escribir y actualizar en la base de datos con el fin de acceder a las rutinas.
 - **RoutineService**: Contiene las funciones que se encargan de obtener las rutinas de la base de datos, ya sea de las generales o las de los propios usuarios
 - **ExerciseService**: Contiene las funciones que nos permiten acceder a los diferentes tipos de ejercicio teniendo en cuenta su grupo muscular.
+- **CargaService**: Contiene una función que obtiene los datos necesarios para la carga dinámica de datos  
 
 ## Interfaces
 - **Exercise**: Interfaz que representa los datos de los ejercicios.
