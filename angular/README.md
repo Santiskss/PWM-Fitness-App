@@ -139,3 +139,4 @@ En caso de ocurrir algún error en el login por medio de google, llegará un cor
 - **exercises{muscular_group}** (Database): Existen varias colecciones de ejercicios, una para cada grupo muscular, que contiene un nombre, una parte del cuerpo, un equipamiento, un id, unas intrucciones, un target y un array con los grupos musculares secundarios.
 - **rutinas** (Database): Tenemos una serie de rutinas con su nombre, descripción, duración, tipo y un array con ejercicios y repeticiones.
 - **user_routines** (Database): Esta colección agrupa rutinas, pero en este caso son solo aquellas creadas por el usuario. Contiene los mismos campos que la colección "rutinas" pero además posee un id del usuario que la creó.
+- **data** (Database): Esta collección contiene una serie de datos que se cargarán en nuestra aplicación, como por ejemplo los textos del header.

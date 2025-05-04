@@ -112,7 +112,6 @@ Para probar el proyecto, ejecute "cd angular" y luego "ng serve"
 - **First-page**: Página a la que acceden los usuarios tras acceder a sus cuentas.
 - **Add-exercise**: Permite añadir nuevos ejercicios a las rutinas.
 - **Create-rutine**: Creación de rutinas nuevas por parte del usuario.
-- **Day-Edit**:
 - **Edit-Rutine**: Edición de rutinas creadas.
 - **Payment**: Pasarela de pago.
 - **Pro-rutine**:
