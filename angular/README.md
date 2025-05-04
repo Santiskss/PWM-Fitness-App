@@ -110,22 +110,22 @@ Para probar el proyecto, ejecute "cd angular" y luego "ng serve"
 - **Edit-Profile**: Da la opción al usuario de cambiar los datos de su perfil: nombre, edad, peso, altura.
 - **Calendar**: Calendario que pueden ver para planificar sus rutinas.
 - **First-page**: Página a la que acceden los usuarios tras acceder a sus cuentas.
-- **Add-exercise**: Permite añadir nuevos ejercicios a las rutinas.
-- **Create-rutine**: Creación de rutinas nuevas por parte del usuario.
-- **Day-Edit**:
-- **Edit-Rutine**: Edición de rutinas creadas.
+- **Routine-List**: Lista de rutinas del usuario, dónde puede seleccionar si eliminar, editar o crear una rutina.
+- **Routine-Form**: Formulario de creación o ediciñon de las rutinas.
 - **Payment**: Pasarela de pago.
-- **Pro-rutine**:
-- **Routine**:
+- **Pro-rutine**: Muestra rutinas seleccionadas del plan de pago.
+- **Routine**: Muestra las diferentes rutinas predefinidas disponibles a partir de un selector.
 - **Select-Payment-Plan**: Muestra los distintos planes que el usuario puede adquirir.
 
 ## Servicios
 - **UserService**: Contiene las funciones necesarias para que un usuario pueda hacer login, registrarse, hacer logout o acceder a la web por medio e una cuenta de google.
--  **RoutineService**:
+- **CreateRoutineService**: Contiene funciones necesarias para leer, escribir y actualizar en la base de datos con el fin de acceder a las rutinas.
+- **RoutineService**: Contiene las funciones que se encargan de obtener las rutinas de la base de datos, ya sea de las generales o las de los propios usuarios
+- **ExerciseService**: Contiene las funciones que nos permiten acceder a los diferentes tipos de ejercicio teniendo en cuenta su grupo muscular.
 
 ## Interfaces
-- **Exercise**: 
-- **Routine**:
+- **Exercise**: Interfaz que representa los datos de los ejercicios.
+- **Routine**: Interfaz que representa las rutinas de ejercicios.
 - **User**: Interfaz que representa los datos del usuario.
 
 ## Estructuras de datos en firebase
@@ -135,3 +135,6 @@ Para probar el proyecto, ejecute "cd angular" y luego "ng serve"
 - **users**(Authentication): Aparecen los usuarios que han accedido a la web con sus cuentas. Los datos que se pueden ver son el correo como el identificador, el medio (correo o google), la fecha de creación y acceso.
  ![users](public/users_auth.png)
 En caso de ocurrir algún error en el login por medio de google, llegará un correo a la cuenta encargada (fitness.app.pwm@gmail.com).
+- **exercises{muscular_group}** (Database): Existen varias colecciones de ejercicios, una para cada grupo muscular, que contiene un nombre, una parte del cuerpo, un equipamiento, un id, unas intrucciones, un target y un array con los grupos musculares secundarios.
+- **rutinas** (Database): Tenemos una serie de rutinas con su nombre, descripción, duración, tipo y un array con ejercicios y repeticiones.
+- **user_routines** (Database): Esta colección agrupa rutinas, pero en este caso son solo aquellas creadas por el usuario. Contiene los mismos campos que la colección "rutinas" pero además posee un id del usuario que la creó.
