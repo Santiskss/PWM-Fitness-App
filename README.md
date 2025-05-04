@@ -98,3 +98,41 @@ En esta carpeta se encuentran todos los png de los mockups</p>
 ## Enlaces
 [![Figma](https://img.shields.io/badge/Figma-8A2BE2)](https://www.figma.com/design/bZUSWn9qFARirKdOZZI1BM/TrainFlow?node-id=0-1&t=9nisu3xCd40wWV6j-1)
 [![Trello](https://img.shields.io/badge/Trello-198500FF)](https://trello.com/invite/b/67ab8943e46d194ce6fce3c8/ATTIfd9e6fbd2b77e614d7d34a565e749f6275992BDE/pwm)
+
+## Angular
+
+Para probar el proyecto, ejecute "cd angular" y luego "ng serve"
+
+## Componentes
+- **MainPage**: Muestra la página inicial desde la que hay acceso a diferentes apartados de la web.
+- **Login**: Permite a los usuarios acceder a sus cuentas.
+- **Register**: Permite a los usuarios crearse una cuenta nueva.
+- **Edit-Profile**: Da la opción al usuario de cambiar los datos de su perfil: nombre, edad, peso, altura.
+- **Calendar**: Calendario que pueden ver para planificar sus rutinas.
+- **First-page**: Página a la que acceden los usuarios tras acceder a sus cuentas.
+- **Add-exercise**: Permite añadir nuevos ejercicios a las rutinas.
+- **Create-rutine**: Creación de rutinas nuevas por parte del usuario.
+- **Day-Edit**:
+- **Edit-Rutine**: Edición de rutinas creadas.
+- **Payment**: Pasarela de pago.
+- **Pro-rutine**:
+- **Routine**:
+- **Select-Payment-Plan**: Muestra los distintos planes que el usuario puede adquirir.
+
+## Servicios
+- **UserService**: Contiene las funciones necesarias para que un usuario pueda hacer login, registrarse, hacer logout o acceder a la web por medio e una cuenta de google.
+-  **RoutineService**:
+
+## Interfaces
+- **Exercise**:
+- **Routine**:
+- **User**: Interfaz que representa los datos del usuario.
+
+## Estructuras de datos en firebase
+
+- **users**(Database): En la base de datos se guardan el nombre, correo, edad, peso y altura indicados en el momento del registro. En caso de no indicarlo, saldrá un mensaje señalándolo.
+  ![users](public/users_database.png)
+- **users**(Authentication): Aparecen los usuarios que han accedido a la web con sus cuentas. Los datos que se pueden ver son el correo como el identificador, el medio (correo o google), la fecha de creación y acceso.
+  ![users](public/users_auth.png)
+  En caso de ocurrir algún error en el login por medio de google, llegará un correo a la cuenta encargada (fitness.app.pwm@gmail.com).
+
