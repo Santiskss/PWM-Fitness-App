@@ -1,13 +1,11 @@
 
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {FooterComponent} from '../../footer/footer.component';
 import {HeaderComponent} from '../../header/header.component';
 import {NgForOf, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {RoutineService} from "../../../services/routine.service";
  import {Routine, RoutineType} from "../../../interfaces/routine";
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-routine',
