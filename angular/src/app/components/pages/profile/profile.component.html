@@ -1,0 +1,25 @@
+<app-header/>
+<main>
+  <img id="icon" src="/imagen_vertical.png" alt="Name">
+  <h1>{{ userName }}</h1>
+  <div class="rectangle">
+    <p>Correo</p>
+    <p>{{userEmail}}</p>
+    <hr>
+    <p>Edad</p>
+    <p>{{ userAge }}</p>
+    <hr>
+    <p>Sexo</p>
+    <p>{{userSex}}</p>
+    <hr>
+    <p>Altura(cm)</p>
+    <p>{{ userHeight }}</p>
+    <hr>
+    <p>Peso(kg)</p>
+    <p>{{ userWeight }}</p>
+  </div>
+
+  <button (click)="gotoEdit()">Editar perfil</button>
+
+</main>
+<app-footer/>

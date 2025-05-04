@@ -1,0 +1,21 @@
+<header class="header_temp">
+  <img id="logo" routerLink="/first-page" [src]="datos_header.logo">
+  <nav>
+    <a routerLink="/routineList" class="enlaces">{{datos_header.crea}}</a>
+    <a routerLink="/pro-routine" class="enlaces">{{datos_header.pro}}</a>
+    <a routerLink="/routine" class="enlaces">{{datos_header.ver}}</a>
+  </nav>
+  <div id="buttons">
+    <div id="buttons-login">
+      <ng-container *ngIf="!isLoggedIn">
+      <button class="logs" routerLink="/register">{{datos_header.regis}}</button>
+      <button class="logs" routerLink="/login">{{datos_header.logi}}</button>
+      </ng-container>
+      <button *ngIf="isLoggedIn" (click)="onClick()" class="btn btn-outline-danger mt-5">Logout</button>
+
+    </div>
+    <img id="foto_perf" src="/icono.avif" routerLink="/profile">
+  </div>
+</header>
+
+

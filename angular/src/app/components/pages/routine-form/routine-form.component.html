@@ -1,0 +1,51 @@
+<app-header></app-header>
+<h2>{{ isEdit ? 'Editar' : 'Crear' }} Rutina</h2>
+<form [formGroup]="form" (ngSubmit)="save()">
+  <label>Nombre</label>
+  <input formControlName="name" />
+
+  <label>Descripción</label>
+  <textarea formControlName="description"></textarea>
+
+  <label>Duración</label>
+  <input formControlName="duration" />
+
+  <label>Grupo muscular</label>
+  <select formControlName="bodyPart" (change)="onGroupChange()">
+    <option *ngFor="let g of groups" [value]="g">{{ g }}</option>
+  </select>
+
+  <div formArrayName="exercises">
+    <div *ngFor="let ctrl of exercisesArr.controls; let i = index"
+         [formGroupName]="i"
+         class="exercise-item">
+
+      <div class="exercise-name">
+        {{ ctrl.value.name }}
+      </div>
+
+      <label>Reps</label>
+      <input formControlName="reps" />
+
+      <button type="button" class="remove-btn" (click)="removeExercise(i)">
+        ×
+      </button>
+    </div>
+
+  </div>
+
+  <label>Agregar ejercicio</label>
+  <select #selEx>
+    <option *ngFor="let ex of exerciseOptions" [value]="ex.id">
+      {{ ex.name }}
+    </option>
+  </select>
+  <button type="button" (click)="addExercise(selEx.value)">
+    Agregar
+  </button>
+
+  <button type="submit" [disabled]="form.invalid">
+    {{ isEdit ? 'Actualizar' : 'Guardar' }}
+  </button>
+</form>
+<app-footer></app-footer>

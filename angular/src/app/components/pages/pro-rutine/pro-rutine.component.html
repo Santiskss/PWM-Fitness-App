@@ -1,0 +1,9 @@
+<app-header/>
+<main>
+  <h2 id="title">Pro Rutines</h2>
+  <div *ngFor="let rutina of rutinas_pro">
+    <app-image-and-text [texto]="rutina.description" [imagen]="'/today_image.webp'"/>
+  </div>
+
+</main>
+<app-footer/>

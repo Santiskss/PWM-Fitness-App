@@ -1,0 +1,95 @@
+#main_login {
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #0066cc;
+}
+
+input[type="submit"] {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #004c99;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.mb-3{
+  margin-block: 0.7em;
+  display: flex;
+  justify-content: center;
+}
+
+.form-control
+{
+  padding-inline: 5em;
+  padding-block: 1em;
+  border-style: solid;
+  border-color: #cdcdcd;
+  text-align: left;
+  margin: 0;
+
+}
+
+.title
+{
+  text-align: center;
+}
+.form-label
+{
+  align-self: center;
+  margin-right: 0.4em;
+}
+
+.form-control-s
+{
+  padding-inline: 4em;
+  padding-block: 1em;
+  border-style: solid;
+  border-color: #cdcdcd;
+  text-align: left;
+  margin: 0;
+}

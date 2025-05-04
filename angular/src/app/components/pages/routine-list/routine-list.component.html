@@ -1,0 +1,25 @@
+<div class="container">
+  <app-header></app-header>
+  <div id="crea-rutina">
+    <h2>Mis Rutinas</h2>
+    <button class="new-btn" (click)="new()">Crear Rutina</button>
+  </div>
+
+
+  <ul *ngIf="routines$ | async as routines; else loading" class="routine-list">
+    <li *ngFor="let r of routines" class="routine-card">
+      <span class="routine-name">{{ r.name }}</span>
+      <div class="routine-actions">
+        <button class="edit-btn" (click)="edit(r.id)">Editar</button>
+        <button class="delete-btn" (click)="delete(r.id)">Eliminar</button>
+      </div>
+    </li>
+    <li *ngIf="routines.length === 0">No hay rutinas.</li>
+  </ul>
+
+  <ng-template #loading>
+    <p>Cargando rutinas…</p>
+  </ng-template>
+
+  <app-footer></app-footer>
+</div>

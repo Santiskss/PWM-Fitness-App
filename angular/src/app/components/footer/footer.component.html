@@ -1,0 +1,29 @@
+<footer class="footer_temp">
+  <div>
+    <section>
+      <img [src]="datos_footer.logo" alt="Logo" id="logo">
+    </section>
+    <section class="footer_texts">
+      <p>{{datos_footer.nosotros}}</p>
+    </section>
+    <section class="footer_texts">
+      <p>{{datos_footer.personal}}</p>
+    </section>
+    <section class="footer_texts">
+      <p>{{datos_footer.blog}}</p>
+    </section>
+  </div>
+  <div>
+    <nav>
+      <a href="#">{{datos_footer.terminos}}</a>
+      <a href="#">{{datos_footer.comunidad}}</a>
+      <a href="#">{{datos_footer.estado}}</a>
+    </nav>
+    <div class="footer_icons">
+      <img [src]="datos_footer.insta.imagen" (click)="redirigir(datos_footer.insta.link)">
+      <img [src]="datos_footer.face.imagen" (click)="redirigir(datos_footer.face.link)">
+      <img [src]="datos_footer.tik.imagen" (click)="redirigir(datos_footer.tik.link)">
+      <img [src]="datos_footer.twit.imagen" (click)="redirigir(datos_footer.twit.link)">
+    </div>
+  </div>
+</footer>

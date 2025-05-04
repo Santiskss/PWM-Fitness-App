@@ -1,0 +1,25 @@
+<app-header/>
+<main>
+  <div class="buttons">
+    <button>Mes</button>
+    <button>Año</button>
+  </div>
+  <div class="rectangles">
+    <app-subscription [price]="datos_sub.plan1.precio" [imagen]="datos_sub.plan1.imagen"/>
+    <app-subscription [price]="datos_sub.plan2.precio" [imagen]="datos_sub.plan2.imagen"/>
+    <app-subscription [price]="datos_sub.plan3.precio" [imagen]="datos_sub.plan3.imagen"/>
+
+  </div>
+  <div class="questions">
+    <div class="half-right">
+      <table *ngFor="let pregunta of datos_sub.preguntas">
+        <tr>
+          <th>{{pregunta.pregunta}}</th>
+        </tr>
+      </table>
+    </div>
+    <div class="half-left">
+    </div>
+  </div>
+</main>
+<app-footer/>

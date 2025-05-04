@@ -1,0 +1,88 @@
+<!-- uploadExercises.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Upload Exercises</title>
+</head>
+<body>
+<h1>Upload Exercises to Firestore</h1>
+<button id="start">Comenzar subida</button>
+<pre id="log"></pre>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import {
+        getFirestore,
+        doc,
+        setDoc
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+    // 1) Inicializa Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyDboHLi3Vl-xgoEGRgh0NmWwBSopasL1Wc",
+        authDomain: "fitness-app-9ff3b.firebaseapp.com",
+        projectId: "fitness-app-9ff3b",
+        storageBucket: "fitness-app-9ff3b.appspot.com",
+        messagingSenderId: "413264381975",
+        appId: "1:413264381975:web:94b5d200ea4909c20d3452"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db  = getFirestore(app);
+
+    // 2) Lista de ficheros JSON a procesar
+    const files = [
+        "exercises_cardio.json",
+        "exercises_chest.json",
+        "exercises_lower_arms.json",
+        "exercises_lower_legs.json",
+        "exercises_neck.json",
+        "exercises_shoulders.json",
+        "exercises_upper_arms.json",
+        "exercises_upper_legs.json",
+        "exercises_waist.json",
+        "exercises_back.json"
+    ];
+
+    // Helpers de UI
+    const logEl   = document.getElementById("log");
+    const startBtn = document.getElementById("start");
+    function log(msg) {
+        logEl.textContent += msg + "\n";
+    }
+
+    // 3) Función principal
+    async function uploadAll() {
+        for (const fname of files) {
+            const colName = fname.replace(/\.json$/, "");  // e.g. "exercises_cardio"
+            log(`📁 Procesando ${fname} → colección "${colName}"`);
+            try {
+                // 3.1) Carga el JSON
+                const resp = await fetch(`./${fname}`);
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const data = await resp.json();
+
+                // 3.2) Sube cada objeto como doc con su propio id
+                for (const ex of data) {
+                    if (!ex.id) {
+                        log(`  ⚠️ Saltado objeto sin id: ${JSON.stringify(ex)}`);
+                        continue;
+                    }
+                    await setDoc(doc(db, colName, ex.id), ex);
+                    log(`  ✔ Subido ${ex.id}`);
+                }
+            } catch (err) {
+                log(`  ❌ Error en ${fname}: ${err.message}`);
+            }
+        }
+        log("✅ ¡Subida completa!");
+    }
+
+    // 4) Arranque al hacer click
+    startBtn.addEventListener("click", () => {
+        startBtn.disabled = true;
+        uploadAll();
+    });
+</script>
+</body>
+</html>

@@ -50,7 +50,7 @@ function loadRoutine(type, index = 0) {
         .then(data => {
             const routine = data[index];
             if (!routine || !routine.exercises) {
-                console.error("Rutina inválida");
+                console.error("Rutine inválida");
                 return;
             }
 
